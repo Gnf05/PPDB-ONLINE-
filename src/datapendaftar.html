@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-container":"#2563eb","border-subtle":"#E2E8F0","status-danger-bg":"#FEE2E2","surface-container":"#e5eeff","on-secondary":"#ffffff","status-danger":"#DC2626","surface-container-high":"#dce9ff","secondary-fixed":"#dde1ff","surface-bg":"#F1F5F9","on-tertiary":"#ffffff","outline-variant":"#c3c6d7","surface-variant":"#d3e4fe","tertiary-fixed-dim":"#adc6ff","on-primary-fixed-variant":"#003ea8","surface-container-low":"#eff4ff","on-tertiary-fixed-variant":"#004395","on-primary":"#ffffff","error-container":"#ffdad6","surface-container-lowest":"#ffffff","banner-info-bg":"#EFF6FF","on-surface":"#0b1c30","secondary":"#3755c3","on-surface-variant":"#434655","primary":"#004ac6","status-success-bg":"#DCFCE7","inverse-surface":"#213145","status-warning-bg":"#FEF3C7","on-primary-fixed":"#00174b","text-secondary":"#64748B","status-warning-text":"#B45309","tertiary-container":"#0f69dc","status-info-bg":"#DBEAFE","text-primary":"#1E293B","background":"#f8f9ff","secondary-fixed-dim":"#b8c4ff","surface":"#f8f9ff","on-secondary-fixed-variant":"#173bab","on-background":"#0b1c30","status-success":"#16A34A","on-error":"#ffffff","surface-tint":"#0053db","on-error-container":"#93000a","primary-fixed-dim":"#b4c5ff","tertiary-fixed":"#d8e2ff","inverse-primary":"#b4c5ff","on-tertiary-fixed":"#001a42","status-danger-text":"#B91C1C","on-secondary-fixed":"#001453","primary-fixed":"#dbe1ff","on-primary-container":"#eeefff","on-secondary-container":"#00217a","status-info-text":"#1D4ED8","status-warning":"#F59E0B","tertiary":"#0051b1","secondary-container":"#708cfd","error":"#ba1a1a","surface-container-highest":"#d3e4fe","outline":"#737686","surface-bright":"#f8f9ff","on-tertiary-container":"#edf0ff","surface-dim":"#cbdbf5","status-success-text":"#15803D","inverse-on-surface":"#eaf1ff","surface-card":"#FFFFFF"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-sm":"1rem","gutter-sm":"1rem","margin":"1.5rem","space-xl":"2rem","space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1.5rem"},"fontFamily":{"caption":["Inter"],"stat-display":["Inter"],"body-base":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"body-medium":["Inter"],"badge-label":["Inter"],"table-header":["Inter"],"title-sm":["Inter"]},"fontSize":{"caption":["12px",{"lineHeight":"16px","fontWeight":"400"}],"stat-display":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-base":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"28px","fontWeight":"600"}],"body-medium":["14px",{"lineHeight":"20px","fontWeight":"500"}],"badge-label":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"table-header":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface-bg font-body-base text-text-primary antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-primary to-primary-container z-50 flex flex-col justify-between text-on-primary shadow-[0_4px_20px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-primary-fixed-dim/20"><img alt="Logo PPDB Online" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyBs7YUBmhZcOdreQjSxwxCk6pXtD-BQNLchW6Z0sVvi48hrMqip37MGhP9FnF81KPYfpcSmDAO8NXdIvSj78O_b8BzGqHs6yXnimmCWF3TWK7hM0QmvIyhPDOc6sRN8I6CSzlxfyTKZf8wU7rgQp8Q8sTXd3vktkLX4czl5SO5-vyUkF9cFbvBigNpdnT0G5u4_b_aDEEH8Bqsr2QF7ixvtmc519aMBcGc-6QWCB7OdZFUHTzxXF-"/><div class="flex flex-col leading-tight min-w-0"><span class="font-title-sm text-title-sm text-on-primary truncate tracking-tight font-bold">PPDB Online</span><span class="font-caption text-caption text-primary-fixed-dim truncate">Panel Admin Utama</span></div></div><nav class="flex flex-col gap-space-xs p-space-sm mt-space-sm" data-active-classes="bg-surface-container-lowest text-primary font-bold shadow-sm"><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="dashboard" href="pages/dashboard.html">Dashboard</a><a aria-current="page" class="px-space-md py-space-sm rounded-lg transition-all duration-150 bg-surface-container-lowest text-primary font-bold shadow-sm" data-path="data-pendaftar" href="pages/pendaftar.html">Data Pendaftar</a><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="verifikasi-berkas" href="pages/verifikasi.html">Verifikasi Berkas</a><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="seleksi-dan-kelulusan" href="pages/seleksi.html">Seleksi &amp; Kelulusan</a><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="master-gelombang" href="pages/gelombang.html">Master Gelombang</a><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="laporan" href="pages/laporan.html">Laporan</a></nav></div><div class="p-space-sm border-t border-primary-fixed-dim/20"><div class="flex items-center justify-between px-space-sm py-space-xs text-primary-fixed-dim font-caption text-caption"><span>Versi Sistem 2.4</span><span class="material-symbols-outlined text-[16px]">school</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card border-b border-border-subtle shadow-[0_1px_3px_0_rgba(0,0,0,0.05),0_1px_2px_-1px_rgba(0,0,0,0.05)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-body-medium text-body-medium"><span class="hover:text-text-primary cursor-pointer">Administrasi</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-primary font-semibold">Portal Penerimaan</span></div><div class="relative w-80 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md bg-surface-card border border-border-subtle rounded-lg text-text-primary placeholder:text-text-secondary font-body-base text-body-base focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/15 transition-all" placeholder="Cari NISN, nama pendaftar..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><button aria-label="Notifikasi antrean berkas" class="relative p-space-xs rounded-lg text-text-secondary hover:bg-surface-container-low hover:text-text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute -top-1 -right-1 bg-status-danger text-on-error font-badge-label text-badge-label px-1.5 py-0.5 rounded-full ring-2 ring-surface-card min-w-[20px] text-center">125</span></button></div><div class="h-8 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right leading-tight"><span class="font-title-sm text-body-medium font-semibold text-text-primary">Admin PPDB</span><span class="font-caption text-caption text-text-secondary">Operator Pusat</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5-sRRs0xJPJzyBqC6UJEg1QnTcKHr_NFrNsnIHstXEIToPsPAAmemR05QHMVNSUEKAlSLjlkvdB_7SxYGOKC2h-9d-Igi-5q8kawunV4D55WTHgw04y5BhwJa7_WP0GXzTBWgmNmRydTNt_8UihyLFEBeWXD2TJV-9eIPwwCZGxOC_3w0nceP4EiY-hWyw7YveOVbZ3nDOJSQPRkHH6vIsVOXIEoadbkCv5JgYjBDM09PL_0Xw4ue"/></div></div></header><main class="w-full pt-16 bg-surface-bg min-h-screen px-gutter py-gutter"><div class="flex flex-col w-full gap-space-lg pb-space-xl">
+<!-- 1. Header Page Title & Toolbar -->
+<script src="navigation.js"></script>
+<script src="ppdb-data.js"></script>
+<script src="page-features.js"></script>
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-caption font-caption text-text-secondary">
+<span>PPDB Online</span>
+<span>•</span>
+<span>Tahun Ajaran 2026/2027</span>
+<span>•</span>
+<span class="text-status-success font-medium">Gelombang 1 Aktif</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight mt-1">Data Master Calon Siswa Pendaftar</h1>
+<p class="font-body-base text-body-base text-text-secondary mt-0.5">Kelola data pendaftaran, filter jalur, status verifikasi, dan ekspor data calon siswa baru 2026/2027</p>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 bg-surface-card hover:bg-surface-container-low text-text-primary font-body-medium text-body-medium rounded-lg shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">print</span>
+<span>Cetak Daftar</span>
+</button>
+<div class="relative inline-block text-left" id="exportDropdownWrapper">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 bg-surface-card hover:bg-surface-container-low text-text-primary font-body-medium text-body-medium rounded-lg shadow-sm transition-all" onclick="document.getElementById('exportMenu').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Ekspor Excel / CSV</span>
+<span class="material-symbols-outlined text-[16px] text-text-secondary">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-48 rounded-lg bg-surface-card shadow-lg ring-1 ring-border-subtle z-30 py-1" id="exportMenu">
+<a class="flex items-center gap-space-sm px-4 py-2 text-caption font-caption text-text-primary hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined text-[16px] text-status-success">table_chart</span> Format Microsoft Excel (.xlsx)
+          </a>
+<a class="flex items-center gap-space-sm px-4 py-2 text-caption font-caption text-text-primary hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined text-[16px] text-status-info-text">description</span> Format CSV (.csv)
+          </a>
+<a class="flex items-center gap-space-sm px-4 py-2 text-caption font-caption text-text-primary hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined text-[16px] text-status-danger">picture_as_pdf</span> Rekapitulasi PDF (.pdf)
+          </a>
+</div>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 bg-primary-container hover:bg-primary text-on-primary font-body-medium text-body-medium rounded-lg shadow-sm transition-all" id="addApplicantBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Tambah Pendaftar Baru</span>
+</button>
+</div>
+</div>
+<!-- 2. 4 Kartu Metrik Ringkasan -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Total Pendaftar -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-secondary uppercase tracking-wider font-semibold">Total Pendaftar</span>
+<span class="font-stat-display text-stat-display text-text-primary mt-1" id="adminTotalCount">0</span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">group</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-space-md">
+<span class="inline-flex items-center gap-0.5 text-badge-label font-badge-label text-status-success bg-status-success-bg px-2 py-0.5 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +12%
+        </span>
+<span class="font-caption text-caption text-text-secondary">dari minggu lalu</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary/20">
+<div class="h-full bg-primary" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Terverifikasi -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-secondary uppercase tracking-wider font-semibold">Terverifikasi</span>
+<span class="font-stat-display text-stat-display text-status-success mt-1" id="adminVerifiedCount">0</span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-status-success-bg flex items-center justify-center text-status-success">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-space-md">
+<span class="inline-flex items-center gap-0.5 text-badge-label font-badge-label text-status-success bg-status-success-bg px-2 py-0.5 rounded-full font-semibold">
+          71.4%
+        </span>
+<span class="font-caption text-caption text-text-secondary">selesai berkas valid</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-status-success/20">
+<div class="h-full bg-status-success" style="width: 71.4%;"></div>
+</div>
+</div>
+<!-- Pending Verifikasi -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-secondary uppercase tracking-wider font-semibold">Pending Verifikasi</span>
+<span class="font-stat-display text-stat-display text-status-warning-text mt-1" id="adminPendingCount">0</span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-status-warning-bg flex items-center justify-center text-status-warning">
+<span class="material-symbols-outlined text-[24px]">pending_actions</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-space-md">
+<span class="inline-flex items-center gap-0.5 text-badge-label font-badge-label text-status-warning-text bg-status-warning-bg px-2 py-0.5 rounded-full font-semibold">
+          10.0%
+        </span>
+<span class="font-caption text-caption text-text-secondary">antrean perlu ditinjau</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-status-warning/20">
+<div class="h-full bg-status-warning" style="width: 10%;"></div>
+</div>
+</div>
+<!-- Ditolak / Tidak Lengkap -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-secondary uppercase tracking-wider font-semibold">Ditolak / Perbaikan</span>
+<span class="font-stat-display text-stat-display text-status-danger mt-1" id="adminNeedsRevisionCount">0</span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-status-danger-bg flex items-center justify-center text-status-danger">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-space-md">
+<span class="inline-flex items-center gap-0.5 text-badge-label font-badge-label text-status-danger-text bg-status-danger-bg px-2 py-0.5 rounded-full font-semibold">
+          18.6%
+        </span>
+<span class="font-caption text-caption text-text-secondary">butuh unggah ulang berkas</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-status-danger/20">
+<div class="h-full bg-status-danger" style="width: 18.6%;"></div>
+</div>
+</div>
+</div>
+<!-- 3. Panel Filter Interaktif & Pencarian -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Search Field -->
+<div class="md:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-space-md bg-surface-bg rounded-lg text-body-base font-body-base text-text-primary placeholder:text-text-secondary focus:outline-none focus:bg-surface-card focus:ring-2 focus:ring-primary/20 transition-all" id="searchInput" placeholder="Cari nomor pendaftaran, nama siswa, atau NISN..." type="text"/>
+</div>
+<!-- Jalur Filter -->
+<div class="md:col-span-3">
+<div class="relative">
+<select class="w-full h-10 px-space-md pr-8 bg-surface-bg text-text-primary font-body-base text-body-base rounded-lg focus:outline-none focus:bg-surface-card focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer" id="jalurFilter">
+<option value="">Semua Jalur Pendaftaran</option>
+<option value="zonasi">Zonasi Reguler</option>
+<option value="prestasi">Prestasi Akademik/Non</option>
+<option value="mutasi">Mutasi / Pindahan Tugas</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-text-secondary text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Status Filter -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full h-10 px-space-md pr-8 bg-surface-bg text-text-primary font-body-base text-body-base rounded-lg focus:outline-none focus:bg-surface-card focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer" id="statusFilter">
+<option value="">Semua Status</option>
+<option value="terverifikasi">Terverifikasi</option>
+<option value="pending">Pengajuan</option>
+<option value="belum_lengkap">Belum Lengkap</option>
+<option value="ditolak">Ditolak</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-text-secondary text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Gelombang Filter -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full h-10 px-space-md pr-8 bg-surface-bg text-text-primary font-body-base text-body-base rounded-lg focus:outline-none focus:bg-surface-card focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer" id="gelombangFilter">
+<option value="1">Gelombang 1 (Aktif)</option>
+<option value="2">Gelombang 2</option>
+<option value="khusus">Gelombang Khusus</option>
+<option value="semua">Semua Gelombang</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-text-secondary text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Reset Filter -->
+<div class="md:col-span-1 flex justify-end">
+<button class="w-full h-10 flex items-center justify-center gap-1 bg-surface-bg hover:bg-surface-container-high text-text-secondary hover:text-text-primary rounded-lg transition-colors font-body-medium text-body-medium px-2" onclick="document.getElementById('searchInput').value=''; document.getElementById('jalurFilter').value=''; document.getElementById('statusFilter').value=''; document.getElementById('gelombangFilter').value='1';" title="Reset Semua Filter" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span class="hidden xl:inline">Reset</span>
+</button>
+</div>
+</div>
+<!-- Active Filters Badge Summary Bar -->
+<div class="flex items-center flex-wrap gap-space-xs text-caption font-caption text-text-secondary pt-1 border-t-0">
+<span class="font-medium text-text-primary">Filter Aktif:</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-bg text-text-primary rounded font-medium">
+        Tahun Ajaran: 2026/2027
+      </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container-low text-primary rounded font-medium" id="activeWaveFilter">
+        Gelombang 1
+        <span class="material-symbols-outlined text-[12px] cursor-pointer">close</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-status-info-bg text-status-info-text rounded font-medium" id="filteredApplicantCount">
+        Total Filter: 0 Calon Siswa
+      </span>
+</div>
+</div>
+<!-- 4. Tabel Master Data Pendaftar (Comprehensive Table) -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-bg/80 text-text-secondary font-table-header text-table-header uppercase">
+<th class="py-3 px-space-md w-10">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" id="checkAll" type="checkbox"/>
+</th>
+<th class="py-3 px-space-md">No. Pendaftaran</th>
+<th class="py-3 px-space-md">NISN &amp; Nama Siswa</th>
+<th class="py-3 px-space-md">Asal Sekolah</th>
+<th class="py-3 px-space-md">Jalur Pilihan</th>
+<th class="py-3 px-space-md text-right">Nilai Rapor</th>
+<th class="py-3 px-space-md">Status Berkas</th>
+<th class="py-3 px-space-md">Tgl Daftar</th>
+<th class="py-3 px-space-md text-center">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-base font-body-base" id="applicantsTableBody">
+<!-- Row 1: Muhammad Rizky Pratama -->
+<tr class="hover:bg-surface-bg/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">PPDB-2026-0001</span>
+<span class="block text-caption font-caption text-text-secondary">Jalur Reguler</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary font-bold text-caption flex items-center justify-center shrink-0">
+                  MR
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate font-semibold">Muhammad Rizky Pratama</span>
+<div class="flex items-center gap-1.5 text-caption font-caption text-text-secondary">
+<span>0089271630</span>
+<span>•</span>
+<span class="text-text-primary/70">Laki-laki</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-text-primary block">SMP Negeri 1 Surabaya</span>
+<span class="text-caption font-caption text-text-secondary">Kota Surabaya</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-info-bg text-status-info-text font-medium">
+                Zonasi Reguler
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-bold text-text-primary">89.65</span>
+<span class="block text-caption font-caption text-text-secondary">Jarak: 480m</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-success-bg text-status-success font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Terverifikasi
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-caption font-caption text-text-secondary whitespace-nowrap">
+              02 Feb 2026, 08:30
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors" title="Detail Profil Siswa">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-primary-container hover:bg-surface-container rounded transition-colors" title="Edit Data Pendaftar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors" title="Cetak Bukti Pendaftaran">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-status-danger hover:bg-status-danger-bg rounded transition-colors" title="Batalkan / Hapus">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Siti Aisyah Azzahra -->
+<tr class="hover:bg-surface-bg/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">PPDB-2026-0002</span>
+<span class="block text-caption font-caption text-text-secondary">Prestasi Sains</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-primary font-bold text-caption flex items-center justify-center shrink-0">
+                  SA
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate font-semibold">Siti Aisyah Azzahra</span>
+<div class="flex items-center gap-1.5 text-caption font-caption text-text-secondary">
+<span>0091823741</span>
+<span>•</span>
+<span class="text-text-primary/70">Perempuan</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-text-primary block">SMP Islam Terpadu Al-Hikmah</span>
+<span class="text-caption font-caption text-text-secondary">Kota Surabaya</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-surface-container-high text-primary font-medium">
+                Prestasi Akademik
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-bold text-text-primary">94.20</span>
+<span class="block text-caption font-caption text-status-success font-medium">OSN Matematika</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-success-bg text-status-success font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Terverifikasi
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-caption font-caption text-text-secondary whitespace-nowrap">
+              02 Feb 2026, 09:12
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors" title="Detail Profil Siswa">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-primary-container hover:bg-surface-container rounded transition-colors" title="Edit Data Pendaftar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors" title="Cetak Bukti Pendaftaran">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-status-danger hover:bg-status-danger-bg rounded transition-colors" title="Batalkan / Hapus">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Dimas Pratama Wijaya -->
+<tr class="hover:bg-surface-bg/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">PPDB-2026-0003</span>
+<span class="block text-caption font-caption text-text-secondary">Jalur Pendaftaran</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-tertiary-container text-on-primary font-bold text-caption flex items-center justify-center shrink-0">
+                  DP
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate font-semibold">Dimas Pratama Wijaya</span>
+<div class="flex items-center gap-1.5 text-caption font-caption text-text-secondary">
+<span>0087612349</span>
+<span>•</span>
+<span class="text-text-primary/70">Laki-laki</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-text-primary block">SMP Negeri 4 Waru</span>
+<span class="text-caption font-caption text-text-secondary">Kab. Sidoarjo</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-warning-bg text-status-warning-text font-medium">
+                Jalur Pendaftaran
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-bold text-text-primary">85.30</span>
+<span class="block text-caption font-caption text-text-secondary">KIP Terlampir</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-warning-bg text-status-warning-text font-medium">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span> Pending
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-caption font-caption text-text-secondary whitespace-nowrap">
+              02 Feb 2026, 10:05
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors" title="Detail Profil Siswa">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-primary-container hover:bg-surface-container rounded transition-colors" title="Edit Data Pendaftar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors" title="Cetak Bukti Pendaftaran">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-status-danger hover:bg-status-danger-bg rounded transition-colors" title="Batalkan / Hapus">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Amanda Putri Lestari -->
+<tr class="hover:bg-surface-bg/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">PPDB-2026-0004</span>
+<span class="block text-caption font-caption text-text-secondary">Zonasi Radius</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-status-info-text text-on-primary font-bold text-caption flex items-center justify-center shrink-0">
+                  AP
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate font-semibold">Amanda Putri Lestari</span>
+<div class="flex items-center gap-1.5 text-caption font-caption text-text-secondary">
+<span>0084519283</span>
+<span>•</span>
+<span class="text-text-primary/70">Perempuan</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-text-primary block">SMP Negeri 12 Surabaya</span>
+<span class="text-caption font-caption text-text-secondary">Kota Surabaya</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-info-bg text-status-info-text font-medium">
+                Zonasi Reguler
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-bold text-text-primary">82.15</span>
+<span class="block text-caption font-caption text-text-secondary">Jarak: 1.200m</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-warning-bg text-status-warning-text font-medium">
+<span class="material-symbols-outlined text-[14px]">info</span> Belum Lengkap
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-caption font-caption text-text-secondary whitespace-nowrap">
+              02 Feb 2026, 11:22
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors" title="Detail Profil Siswa">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-primary-container hover:bg-surface-container rounded transition-colors" title="Edit Data Pendaftar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors" title="Cetak Bukti Pendaftaran">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-status-danger hover:bg-status-danger-bg rounded transition-colors" title="Batalkan / Hapus">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Rayhan Pratama Putra -->
+<tr class="hover:bg-surface-bg/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">PPDB-2026-0005</span>
+<span class="block text-caption font-caption text-text-secondary">Pindahan Orang Tua</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-status-danger text-on-primary font-bold text-caption flex items-center justify-center shrink-0">
+                  RP
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate font-semibold">Rayhan Pratama Putra</span>
+<div class="flex items-center gap-1.5 text-caption font-caption text-text-secondary">
+<span>0082349182</span>
+<span>•</span>
+<span class="text-text-primary/70">Laki-laki</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-text-primary block">SMP Negeri 5 Bandung</span>
+<span class="text-caption font-caption text-text-secondary">Kota Bandung</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-secondary-fixed text-on-secondary-fixed-variant font-medium">
+                Mutasi / Pindahan
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-bold text-text-primary">87.40</span>
+<span class="block text-caption font-caption text-text-secondary">SK Kadis</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-danger-bg text-status-danger font-medium">
+<span class="material-symbols-outlined text-[14px]">cancel</span> Ditolak
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-caption font-caption text-text-secondary whitespace-nowrap">
+              02 Feb 2026, 13:40
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors" title="Detail Profil Siswa">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-primary-container hover:bg-surface-container rounded transition-colors" title="Edit Data Pendaftar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors" title="Cetak Bukti Pendaftaran">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-status-danger hover:bg-status-danger-bg rounded transition-colors" title="Batalkan / Hapus">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Nurul Hidayah Kusuma -->
+<tr class="hover:bg-surface-bg/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">PPDB-2026-0006</span>
+<span class="block text-caption font-caption text-text-secondary">Prestasi Non-Akad</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-status-success text-on-primary font-bold text-caption flex items-center justify-center shrink-0">
+                  NH
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate font-semibold">Nurul Hidayah Kusuma</span>
+<div class="flex items-center gap-1.5 text-caption font-caption text-text-secondary">
+<span>0086751094</span>
+<span>•</span>
+<span class="text-text-primary/70">Perempuan</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-text-primary block">MTs Negeri 1 Surabaya</span>
+<span class="text-caption font-caption text-text-secondary">Kota Surabaya</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-surface-container-high text-primary font-medium">
+                Prestasi Non-Akademik
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-bold text-text-primary">91.80</span>
+<span class="block text-caption font-caption text-status-success font-medium">Tahfidz 5 Juz</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-success-bg text-status-success font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Terverifikasi
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-caption font-caption text-text-secondary whitespace-nowrap">
+              02 Feb 2026, 14:15
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors" title="Detail Profil Siswa">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-primary-container hover:bg-surface-container rounded transition-colors" title="Edit Data Pendaftar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors" title="Cetak Bukti Pendaftaran">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-status-danger hover:bg-status-danger-bg rounded transition-colors" title="Batalkan / Hapus">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Fajar Ramadhan -->
+<tr class="hover:bg-surface-bg/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">PPDB-2026-0007</span>
+<span class="block text-caption font-caption text-text-secondary">Zonasi Radius</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-inverse-surface text-on-primary font-bold text-caption flex items-center justify-center shrink-0">
+                  FR
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate font-semibold">Fajar Ramadhan</span>
+<div class="flex items-center gap-1.5 text-caption font-caption text-text-secondary">
+<span>0085432190</span>
+<span>•</span>
+<span class="text-text-primary/70">Laki-laki</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-text-primary block">SMP Negeri 2 Surabaya</span>
+<span class="text-caption font-caption text-text-secondary">Kota Surabaya</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-info-bg text-status-info-text font-medium">
+                Zonasi Reguler
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-bold text-text-primary">88.45</span>
+<span class="block text-caption font-caption text-text-secondary">Jarak: 610m</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-badge-label font-badge-label bg-status-success-bg text-status-success font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Terverifikasi
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-caption font-caption text-text-secondary whitespace-nowrap">
+              02 Feb 2026, 15:02
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors" title="Detail Profil Siswa">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-primary-container hover:bg-surface-container rounded transition-colors" title="Edit Data Pendaftar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors" title="Cetak Bukti Pendaftaran">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-status-danger hover:bg-status-danger-bg rounded transition-colors" title="Batalkan / Hapus">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- 5. Footer Tabel: Bulk Action & Pagination -->
+<div class="p-space-md bg-surface-card flex flex-col md:flex-row items-center justify-between gap-space-md border-t-0">
+<!-- Left: Counter & Bulk Action -->
+<div class="flex items-center flex-wrap gap-space-md w-full md:w-auto">
+<span class="font-caption text-caption text-text-secondary">
+          Menampilkan <strong class="text-text-primary font-semibold" id="applicantPageSummary">0</strong> pendaftar
+        </span>
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<select class="h-9 px-space-md pr-7 bg-surface-bg text-text-primary font-body-medium text-body-medium rounded-lg focus:outline-none appearance-none cursor-pointer" id="bulkAction">
+<option value="">Pilih Aksi Massal...</option>
+<option value="verify">✓ Verifikasi Berkas Massal</option>
+<option value="print">🖨️ Cetak Formulir Massal</option>
+<option value="export">📥 Ekspor Data Terpilih</option>
+<option value="reject">✕ Tolak Berkas Massal</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-text-secondary text-[16px] pointer-events-none">arrow_drop_down</span>
+</div>
+<button class="h-9 px-space-md bg-surface-container hover:bg-surface-container-high text-primary font-body-medium text-body-medium rounded-lg transition-colors" id="applyBulkAction" type="button">
+            Terapkan
+          </button>
+</div>
+</div>
+<!-- Right: Pagination -->
+<div class="flex items-center gap-1 w-full md:w-auto justify-end" id="applicantPagination">
+<button class="h-9 px-3 flex items-center gap-1 rounded-lg bg-surface-bg hover:bg-surface-container text-text-secondary hover:text-text-primary font-body-medium text-body-medium transition-colors disabled:opacity-50" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Sebelumnya</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-primary text-on-primary font-body-medium text-body-medium font-bold shadow-sm" type="button">
+          1
+        </button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-bg hover:bg-surface-container text-text-primary font-body-medium text-body-medium transition-colors" type="button">
+          2
+        </button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-bg hover:bg-surface-container text-text-primary font-body-medium text-body-medium transition-colors" type="button">
+          3
+        </button>
+<span class="px-1 text-text-secondary text-caption font-caption">...</span>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-bg hover:bg-surface-container text-text-primary font-body-medium text-body-medium transition-colors" type="button">
+          125
+        </button>
+<button class="h-9 px-3 flex items-center gap-1 rounded-lg bg-surface-bg hover:bg-surface-container text-text-primary font-body-medium text-body-medium transition-colors" type="button">
+<span>Selanjutnya</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Alert & System Activity Insight -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Notice Card -->
+<div class="lg:col-span-2 bg-banner-info-bg rounded-xl p-space-lg shadow-sm flex items-start gap-space-md">
+<div class="p-2 bg-primary/10 text-primary rounded-lg shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-text-primary font-semibold">Ringkasan Pendaftaran</span>
+<p class="font-body-base text-body-base text-text-secondary mt-1">
+          Rekap ini mengikuti record pendaftar dan status verifikasi yang tersimpan di sistem.
+        </p>
+<div class="flex items-center gap-space-md mt-space-sm text-caption font-caption">
+<span class="text-status-success font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync</span> Sumber: Data Pendaftar
+          </span>
+<a class="text-primary hover:underline font-medium" href="#">Buka Log Audit Verifikasi →</a>
+</div>
+</div>
+</div>
+<!-- Quick Stat Summary Card -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-text-primary font-semibold">Kapasitas Daya Tampung</span>
+<span class="text-badge-label font-badge-label text-primary font-semibold bg-surface-container px-2 py-0.5 rounded-full">
+          Target: <span id="applicantQuotaTarget">0</span> Siswa
+        </span>
+</div>
+<div class="my-space-md flex flex-col gap-1.5">
+<div class="flex justify-between text-caption font-caption text-text-secondary">
+<span>Kandidat Lolos Sementara</span>
+<span class="font-semibold text-text-primary" id="applicantQuotaPassed">0 / 0 (0%)</span>
+</div>
+<div class="flex h-2.5 w-full overflow-hidden rounded-full bg-surface-bg" id="applicantQuotaPathBars"></div>
+<div class="flex flex-wrap items-center justify-between gap-2 text-[11px] text-text-secondary font-caption pt-1" id="applicantQuotaPathLegend"></div>
+</div>
+<div class="pt-space-sm border-t-0 flex items-center justify-between text-caption font-caption">
+<span class="text-text-secondary">Sisa Kursi: <strong class="text-status-success font-semibold" id="applicantQuotaRemaining">0 Kursi</strong></span>
+<a class="text-primary font-semibold hover:underline" data-path="master-gelombang" href="mastergelombang.html">Kelola Kuota →</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Bulk selection handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const checkAll = document.getElementById('checkAll');
+    const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+
+    if (checkAll) {
+      checkAll.addEventListener('change', function() {
+        rowCheckboxes.forEach(cb => cb.checked = checkAll.checked);
+      });
+    }
+
+    // Close export dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const exportWrapper = document.getElementById('exportDropdownWrapper');
+      const exportMenu = document.getElementById('exportMenu');
+      if (exportWrapper && exportMenu && !exportWrapper.contains(event.target)) {
+        exportMenu.classList.add('hidden');
+      }
+    });
+  });
+</script></main></div></body></html>

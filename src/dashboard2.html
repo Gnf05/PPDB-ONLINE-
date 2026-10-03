@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-container":"#edf0ff","surface-container-high":"#dce9ff","status-info-bg":"#DBEAFE","on-primary-container":"#eeefff","error":"#ba1a1a","on-secondary-fixed-variant":"#173bab","text-primary":"#1E293B","on-secondary-fixed":"#001453","on-secondary-container":"#00217a","tertiary-fixed":"#d8e2ff","surface-card":"#FFFFFF","on-tertiary-fixed":"#001a42","status-success-bg":"#DCFCE7","on-secondary":"#ffffff","status-warning":"#F59E0B","border-subtle":"#E2E8F0","surface-variant":"#d3e4fe","surface-dim":"#cbdbf5","on-primary-fixed-variant":"#003ea8","surface-container-low":"#eff4ff","status-success-text":"#15803D","on-primary-fixed":"#00174b","on-tertiary":"#ffffff","status-warning-bg":"#FEF3C7","on-tertiary-fixed-variant":"#004395","primary-fixed-dim":"#b4c5ff","surface-bright":"#f8f9ff","primary-container":"#2563eb","on-primary":"#ffffff","banner-info-bg":"#EFF6FF","error-container":"#ffdad6","status-info-text":"#1D4ED8","secondary-fixed-dim":"#b8c4ff","inverse-surface":"#213145","surface":"#f8f9ff","surface-container":"#e5eeff","tertiary-fixed-dim":"#adc6ff","status-success":"#16A34A","secondary-container":"#708cfd","on-surface":"#0b1c30","on-background":"#0b1c30","inverse-on-surface":"#eaf1ff","tertiary-container":"#0f69dc","on-error":"#ffffff","surface-tint":"#0053db","surface-container-highest":"#d3e4fe","background":"#f8f9ff","on-surface-variant":"#434655","status-warning-text":"#B45309","inverse-primary":"#b4c5ff","tertiary":"#0051b1","outline-variant":"#c3c6d7","on-error-container":"#93000a","secondary-fixed":"#dde1ff","secondary":"#3755c3","status-danger":"#DC2626","surface-bg":"#F1F5F9","outline":"#737686","text-secondary":"#64748B","status-danger-text":"#B91C1C","surface-container-lowest":"#ffffff","status-danger-bg":"#FEE2E2","primary-fixed":"#dbe1ff","primary":"#004ac6"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","gutter":"1.5rem","margin":"1.5rem","gutter-sm":"1rem","space-lg":"1.5rem","space-md":"1rem","margin-sm":"1rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"stat-display":["Inter"],"body-medium":["Inter"],"headline-md":["Inter"],"badge-label":["Inter"],"headline-lg":["Inter"],"body-base":["Inter"],"caption":["Inter"],"title-sm":["Inter"],"table-header":["Inter"]},"fontSize":{"stat-display":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-medium":["14px",{"lineHeight":"20px","fontWeight":"500"}],"headline-md":["18px",{"lineHeight":"28px","fontWeight":"600"}],"badge-label":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-base":["14px",{"lineHeight":"20px","fontWeight":"400"}],"caption":["12px",{"lineHeight":"16px","fontWeight":"400"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"table-header":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface-bg font-body-base text-text-primary antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-primary to-primary-container z-50 flex flex-col justify-between text-on-primary shadow-[0_4px_20px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-primary-fixed-dim/20"><img alt="Logo PPDB Online" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyBs7YUBmhZcOdreQjSxwxCk6pXtD-BQNLchW6Z0sVvi48hrMqip37MGhP9FnF81KPYfpcSmDAO8NXdIvSj78O_b8BzGqHs6yXnimmCWF3TWK7hM0QmvIyhPDOc6sRN8I6CSzlxfyTKZf8wU7rgQp8Q8sTXd3vktkLX4czl5SO5-vyUkF9cFbvBigNpdnT0G5u4_b_aDEEH8Bqsr2QF7ixvtmc519aMBcGc-6QWCB7OdZFUHTzxXF-"/><div class="flex flex-col leading-tight min-w-0"><span class="font-title-sm text-title-sm text-on-primary truncate tracking-tight font-bold">PPDB Online</span><span class="font-caption text-caption text-primary-fixed-dim truncate">Panel Admin Utama</span></div></div><nav class="flex flex-col gap-space-xs p-space-sm mt-space-sm" data-active-classes="bg-surface-container-lowest text-primary font-bold shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all duration-150 bg-surface-container-lowest text-primary font-bold shadow-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-medium text-body-medium">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150" data-path="data-pendaftar" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-body-medium text-body-medium">Data Pendaftar</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150" data-path="verifikasi-berkas" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span class="font-body-medium text-body-medium">Verifikasi Berkas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150" data-path="seleksi-dan-kelulusan" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-body-medium text-body-medium">Seleksi &amp; Kelulusan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150" data-path="master-gelombang" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span class="font-body-medium text-body-medium">Master Gelombang</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150" data-path="laporan" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span class="font-body-medium text-body-medium">Laporan</span></a></nav></div><div class="p-space-sm border-t border-primary-fixed-dim/20"><div class="flex items-center justify-between px-space-sm py-space-xs text-primary-fixed-dim font-caption text-caption"><span>Versi Sistem 2.4</span><span class="material-symbols-outlined text-[16px]">school</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card border-b border-border-subtle shadow-[0_1px_3px_0_rgba(0,0,0,0.05),0_1px_2px_-1px_rgba(0,0,0,0.05)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-body-medium text-body-medium"><span class="hover:text-text-primary cursor-pointer">Administrasi</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-primary font-semibold">Portal Penerimaan</span></div><div class="relative w-80 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md bg-surface-card border border-border-subtle rounded-lg text-text-primary placeholder:text-text-secondary font-body-base text-body-base focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/15 transition-all" placeholder="Cari NISN, nama pendaftar..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><button aria-label="Notifikasi antrean berkas" class="relative p-space-xs rounded-lg text-text-secondary hover:bg-surface-container-low hover:text-text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute -top-1 -right-1 bg-status-danger text-on-error font-badge-label text-badge-label px-1.5 py-0.5 rounded-full ring-2 ring-surface-card min-w-[20px] text-center">125</span></button></div><div class="h-8 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right leading-tight"><span class="font-title-sm text-body-medium font-semibold text-text-primary">Admin PPDB</span><span class="font-caption text-caption text-text-secondary">Operator Pusat</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5-sRRs0xJPJzyBqC6UJEg1QnTcKHr_NFrNsnIHstXEIToPsPAAmemR05QHMVNSUEKAlSLjlkvdB_7SxYGOKC2h-9d-Igi-5q8kawunV4D55WTHgw04y5BhwJa7_WP0GXzTBWgmNmRydTNt_8UihyLFEBeWXD2TJV-9eIPwwCZGxOC_3w0nceP4EiY-hWyw7YveOVbZ3nDOJSQPRkHH6vIsVOXIEoadbkCv5JgYjBDM09PL_0Xw4ue"/></div></div></header><main class="w-full pt-16 bg-surface-bg min-h-screen px-gutter py-gutter"><div class="flex flex-col w-full gap-space-lg">
+<!-- 1. Alert Banner -->
+<script src="navigation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js"></script>
+<script src="ppdb-data.js"></script>
+<script src="page-features.js"></script>
+<section class="w-full bg-banner-info-bg rounded-lg shadow-sm p-space-md border-l-4 border-primary-container flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md transition-all duration-200">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-status-info-bg flex items-center justify-center text-status-info-text shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">info</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h2 class="font-title-sm text-title-sm text-text-primary">Selamat Datang di Panel PPDB Online 2026/2027</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-badge-label text-badge-label bg-status-warning-bg text-status-warning-text font-semibold">Tenggat 5 Hari</span>
+</div>
+<p class="font-body-base text-body-base text-text-secondary mt-1">
+          Gelombang I tersisa 5 hari lagi sebelum penutupan. Segera verifikasi berkas tertunda sebanyak <strong class="text-text-primary font-semibold" id="dashboardQueueCount">125</strong> pendaftar.
+        </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-primary text-on-primary rounded-lg font-body-medium text-body-medium hover:bg-primary-fixed-dim hover:text-on-primary-fixed shadow-sm active:scale-95 transition-all whitespace-nowrap self-stretch md:self-auto justify-center" data-path="verifikasi-berkas" href="#">
+<span>Buka Antrean Verifikasi</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</section>
+<!-- 2. 4 Stat Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<!-- Card 1: Total Pendaftar -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-secondary tracking-wide uppercase font-semibold">Total Pendaftar</span>
+<div class="w-10 h-10 rounded-lg bg-status-info-bg flex items-center justify-center text-status-info-text">
+<span class="material-symbols-outlined text-[22px]">group</span>
+</div>
+</div>
+<div class="mt-4">
+<span class="font-stat-display text-stat-display text-text-primary block" id="dashboardTotalCount">0</span>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center text-[13px] font-semibold text-status-success-text bg-status-success-bg px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[15px] mr-0.5">trending_up</span> Data tersimpan
+          </span>
+<span class="font-caption text-caption text-text-secondary">pada sumber bersama</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Verifikasi Berkas -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-secondary tracking-wide uppercase font-semibold">Verifikasi Berkas</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">assignment_turned_in</span>
+</div>
+</div>
+<div class="mt-4">
+<span class="font-stat-display text-stat-display text-text-primary block" id="dashboardVerifiedCount">0</span>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center text-[13px] font-semibold text-status-info-text bg-status-info-bg px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[15px] mr-0.5">task_alt</span> <span id="dashboardVerifiedRatio">0%</span>
+          </span>
+<span class="font-caption text-caption text-text-secondary">selesai diperiksa</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Diterima / Lolos -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-secondary tracking-wide uppercase font-semibold">Diterima / Lolos</span>
+<div class="w-10 h-10 rounded-lg bg-status-success-bg flex items-center justify-center text-status-success-text">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="mt-4">
+<span class="font-stat-display text-stat-display text-text-primary block" id="dashboardPassedCount">0</span>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center text-[13px] font-semibold text-status-success-text bg-status-success-bg px-2 py-0.5 rounded-full" id="dashboardPassedRatio">
+<span class="material-symbols-outlined text-[15px] mr-0.5">verified</span> 51.2%
+          </span>
+<span class="font-caption text-caption text-text-secondary" id="dashboardTotalQuota">Pagu: 0 siswa</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Ditolak / Belum Lengkap -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-secondary tracking-wide uppercase font-semibold">Ditolak / Perlu Revisi</span>
+<div class="w-10 h-10 rounded-lg bg-status-danger-bg flex items-center justify-center text-status-danger-text">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+</div>
+<div class="mt-4">
+<span class="font-stat-display text-stat-display text-text-primary block" id="dashboardNeedsRevisionCount">0</span>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center text-[13px] font-semibold text-status-warning-text bg-status-warning-bg px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[15px] mr-0.5">error_outline</span> <span id="dashboardNeedsRevisionBadge">0</span>
+          </span>
+<span class="font-caption text-caption text-text-secondary">pendaftar perlu perbaikan</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Middle Section (Charts & Wave Overview) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Left Column (8 cols): Daily Registration Trends -->
+<div class="lg:col-span-8 bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-text-primary">Tren Pendaftaran Harian</h3>
+<span class="material-symbols-outlined text-text-secondary text-[18px]">show_chart</span>
+</div>
+<p class="font-caption text-caption text-text-secondary">Jumlah calon siswa mendaftar 10 hari terakhir (01 Mei s/d 10 Mei 2026)</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded-full text-primary font-caption text-caption font-semibold" id="dashboardTrendAverage">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Rerata: 124 siswa/hari
+          </span>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-text-secondary hover:text-text-primary hover:bg-surface-container transition-colors" id="downloadTrendPdf" title="Unduh Laporan Harian" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Interactive Chart Area -->
+<div class="w-full mt-4 flex flex-col justify-end">
+<div class="relative h-64 w-full flex items-end justify-between pt-6 pb-2 px-1">
+<!-- Horizontal Guidelines (Background Canvas) -->
+<div class="absolute inset-x-0 top-0 h-px bg-surface-container"></div>
+<div class="absolute inset-x-0 top-1/4 h-px bg-surface-container"></div>
+<div class="absolute inset-x-0 top-2/4 h-px bg-surface-container"></div>
+<div class="absolute inset-x-0 top-3/4 h-px bg-surface-container"></div>
+<div class="absolute inset-x-0 bottom-6 h-px bg-surface-container-high"></div>
+<!-- Y-Axis labels (Absolute Left) -->
+<div class="absolute left-0 top-0 bottom-6 flex flex-col justify-between pointer-events-none text-text-secondary font-caption text-[10px] pl-1">
+<span>200</span>
+<span>150</span>
+<span>100</span>
+<span>50</span>
+<span>0</span>
+</div>
+<!-- Chart Bars Container -->
+<div class="w-full ml-7 flex items-end justify-between gap-1 sm:gap-2 h-full pb-6 z-10" id="registrationTrendChart">
+<!-- Bar 1 (85) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-inverse-surface text-inverse-on-surface text-[11px] font-medium py-0.5 px-2 rounded shadow-md pointer-events-none z-30">85</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary to-secondary-container transition-all duration-300 group-hover:brightness-110 shadow-sm" style="height: 42.5%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-text-secondary group-hover:text-primary font-medium">01 Mei</span>
+</div>
+<!-- Bar 2 (96) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-inverse-surface text-inverse-on-surface text-[11px] font-medium py-0.5 px-2 rounded shadow-md pointer-events-none z-30">96</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary to-secondary-container transition-all duration-300 group-hover:brightness-110 shadow-sm" style="height: 48%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-text-secondary group-hover:text-primary font-medium">02 Mei</span>
+</div>
+<!-- Bar 3 (110) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-inverse-surface text-inverse-on-surface text-[11px] font-medium py-0.5 px-2 rounded shadow-md pointer-events-none z-30">110</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary to-secondary-container transition-all duration-300 group-hover:brightness-110 shadow-sm" style="height: 55%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-text-secondary group-hover:text-primary font-medium">03 Mei</span>
+</div>
+<!-- Bar 4 (125) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-inverse-surface text-inverse-on-surface text-[11px] font-medium py-0.5 px-2 rounded shadow-md pointer-events-none z-30">125</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary to-secondary-container transition-all duration-300 group-hover:brightness-110 shadow-sm" style="height: 62.5%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-text-secondary group-hover:text-primary font-medium">04 Mei</span>
+</div>
+<!-- Bar 5 (142) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-inverse-surface text-inverse-on-surface text-[11px] font-medium py-0.5 px-2 rounded shadow-md pointer-events-none z-30">142</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary to-secondary-container transition-all duration-300 group-hover:brightness-110 shadow-sm" style="height: 71%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-text-secondary group-hover:text-primary font-medium">05 Mei</span>
+</div>
+<!-- Bar 6 (130) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-inverse-surface text-inverse-on-surface text-[11px] font-medium py-0.5 px-2 rounded shadow-md pointer-events-none z-30">130</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary to-secondary-container transition-all duration-300 group-hover:brightness-110 shadow-sm" style="height: 65%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-text-secondary group-hover:text-primary font-medium">06 Mei</span>
+</div>
+<!-- Bar 7 (155) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-inverse-surface text-inverse-on-surface text-[11px] font-medium py-0.5 px-2 rounded shadow-md pointer-events-none z-30">155</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary to-secondary-container transition-all duration-300 group-hover:brightness-110 shadow-sm" style="height: 77.5%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-text-secondary group-hover:text-primary font-medium">07 Mei</span>
+</div>
+<!-- Bar 8 (178) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-inverse-surface text-inverse-on-surface text-[11px] font-medium py-0.5 px-2 rounded shadow-md pointer-events-none z-30">178</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary to-secondary-container transition-all duration-300 group-hover:brightness-110 shadow-sm" style="height: 89%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-text-secondary group-hover:text-primary font-medium">08 Mei</span>
+</div>
+<!-- Bar 9 (192) Peak -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-primary text-on-primary text-[11px] font-bold py-0.5 px-2 rounded shadow-md pointer-events-none z-30">192 (Puncak)</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary-container to-primary transition-all duration-300 group-hover:brightness-110 shadow-md ring-2 ring-primary/30" style="height: 96%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-primary font-bold">09 Mei</span>
+</div>
+<!-- Bar 10 (135) Current -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-7 bg-inverse-surface text-inverse-on-surface text-[11px] font-medium py-0.5 px-2 rounded shadow-md pointer-events-none z-30">135 (Hari Ini)</span>
+<div class="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-primary to-secondary-container transition-all duration-300 group-hover:brightness-110 shadow-sm" style="height: 67.5%;"></div>
+<span class="absolute -bottom-5 font-caption text-[11px] text-text-secondary group-hover:text-primary font-medium">10 Mei</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Legend / Insight Bar -->
+<div class="mt-8 pt-4 flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 font-caption text-caption text-text-secondary">
+<span class="w-3 h-3 rounded-sm bg-primary inline-block"></span> Pendaftaran Selesai
+          </div>
+<div class="flex items-center gap-1.5 font-caption text-caption text-text-secondary">
+<span class="w-3 h-3 rounded-sm bg-status-info-bg inline-block"></span> Proporsi pendaftar menurut jalur
+          </div>
+</div>
+<span class="font-caption text-caption text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sync</span> Terakhir disinkronkan: 12 menit lalu
+        </span>
+</div>
+</div>
+<!-- Right Column (4 cols): Gelombang Pendaftaran & Jalur -->
+<div class="lg:col-span-4 bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-text-primary">Gelombang Aktif</h3>
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+</div>
+<span class="font-badge-label text-badge-label bg-status-info-bg text-status-info-text px-2 py-0.5 rounded-full font-semibold">T.A 2026/2027</span>
+</div>
+<!-- Wave 1 Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md mt-space-sm shadow-none">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm text-text-primary font-bold">Gelombang I</span>
+<span class="font-badge-label text-badge-label bg-status-success-bg text-status-success-text px-2 py-0.5 rounded-full font-bold">Buka</span>
+</div>
+<span class="font-caption text-caption text-text-secondary">1 Mei - 20 Mei 2026</span>
+</div>
+<div class="mt-3">
+<div class="flex justify-between font-caption text-caption mb-1.5">
+<span class="text-text-secondary font-medium" id="dashboardWaveCapacityPercent">Kapasitas Terisi (0%)</span>
+<span class="text-text-primary font-bold" id="dashboardWaveCapacityCount">0 / 0 Kuota</span>
+</div>
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" id="dashboardWaveCapacityProgress" style="width: 0%;"></div>
+</div>
+<div class="flex justify-between items-center mt-2 font-caption text-caption">
+<span class="text-status-danger-text font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">event_busy</span> <span id="dashboardWaveRemaining">Sisa: 0 kursi</span>
+              </span>
+              <a class="text-primary hover:underline font-semibold text-[11px]" data-path="master-gelombang" href="#">Rincian →</a>
+</div>
+</div>
+</div>
+<!-- Wave 2 Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md mt-space-sm shadow-sm opacity-90">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm text-text-primary font-bold">Gelombang II</span>
+<span class="font-badge-label text-badge-label bg-status-warning-bg text-status-warning-text px-2 py-0.5 rounded-full font-bold">Segera</span>
+</div>
+<span class="font-caption text-caption text-text-secondary">Mulai 15 Juni 2026</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-1.5">Kuota cadangan: <strong class="text-text-primary" id="dashboardWave2Quota">0 kursi</strong> (Jalur Prestasi Tahap II &amp; Pemenuhan Pagu).</p>
+</div>
+<!-- Distribution by Track (Jalur PPDB) -->
+<div class="mt-space-md pt-space-sm">
+<span class="font-caption text-caption uppercase tracking-wider text-text-secondary font-bold block mb-2">Distribusi Jalur Pendaftaran</span>
+<div class="space-y-2.5" id="dashboardPathDistribution">
+<!-- Zonasi -->
+<div>
+<div class="flex justify-between font-caption text-caption mb-1">
+<span class="text-text-primary font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span> Zonasi Reguler
+                </span>
+<span class="text-text-primary font-bold">45% <span class="font-normal text-text-secondary">(561 siswa)</span></span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Prestasi -->
+<div>
+<div class="flex justify-between font-caption text-caption mb-1">
+<span class="text-text-primary font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary-container inline-block"></span> Prestasi Akademik/Non
+                </span>
+<span class="text-text-primary font-bold">35% <span class="font-normal text-text-secondary">(437 siswa)</span></span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 35%;"></div>
+</div>
+</div>
+<!-- Pindahan / Mutasi -->
+<div>
+<div class="flex justify-between font-caption text-caption mb-1">
+<span class="text-text-primary font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-outline inline-block"></span> Perpindahan Tugas Orang Tua
+                </span>
+<span class="text-text-primary font-bold">5% <span class="font-normal text-text-secondary">(63 siswa)</span></span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 5%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-caption font-caption text-text-secondary">
+<span>Pengaturan Kuota Sekolah</span>
+<button class="text-primary hover:underline font-semibold flex items-center gap-0.5" data-admin-only type="button">
+<span>Kelola Daya Tampung</span>
+<span class="material-symbols-outlined text-[14px]">tune</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 4. Table Section: Calon Siswa Pendaftar Terbaru -->
+<section class="w-full bg-surface-card rounded-xl p-space-lg shadow-sm">
+<!-- Table Header & Controls -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-text-primary">Calon Siswa Pendaftar Terbaru</h3>
+<span class="bg-status-info-bg text-status-info-text font-badge-label text-badge-label px-2.5 py-0.5 rounded-full font-bold">Realtime</span>
+</div>
+<p class="font-caption text-caption text-text-secondary">Antrean pendaftaran masuk yang membutuhkan peninjauan dokumen administrasi</p>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm">
+<!-- Quick Search Table -->
+<div class="relative min-w-[220px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary text-[18px]">filter_list</span>
+<input class="w-full h-9 pl-9 pr-3 bg-surface-container-low rounded-lg text-text-primary placeholder:text-text-secondary font-body-base text-[13px] focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" id="kepsekSearch" placeholder="Saring nama / NISN..." type="text"/>
+</div>
+<!-- Filter Dropdown Dummy -->
+<div class="relative">
+<select class="h-9 px-3 bg-surface-container-low rounded-lg text-text-primary font-body-medium text-[13px] focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer pr-8 appearance-none" id="kepsekPathFilter">
+<option value="">Semua Jalur</option>
+<option value="zonasi">Zonasi</option>
+<option value="prestasi">Prestasi</option>
+<option value="mutasi">Mutasi</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-text-secondary text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Action Button: See All -->
+<a class="h-9 px-space-md bg-surface-container text-primary font-body-medium text-body-medium rounded-lg hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1" data-path="data-pendaftar" href="#">
+<span>Lihat Semua Data</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="overflow-x-auto w-full rounded-lg bg-surface-container-lowest">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-text-secondary font-table-header text-table-header uppercase tracking-wider">
+<th class="py-3 px-4 font-semibold">No. Pendaftaran</th>
+<th class="py-3 px-4 font-semibold">Nama Siswa &amp; NISN</th>
+<th class="py-3 px-4 font-semibold">Asal Sekolah</th>
+<th class="py-3 px-4 font-semibold">Jalur</th>
+<th class="py-3 px-4 font-semibold">Tgl Daftar</th>
+<th class="py-3 px-4 font-semibold">Status Berkas</th>
+<th class="py-3 px-4 font-semibold text-center">Aksi Cepat</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-base text-body-base text-text-primary" id="dashboardApplicantsBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono text-[13px] font-semibold text-primary">
+              PPDB-2026-0012
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs shrink-0">
+                  MR
+                </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-text-primary font-semibold">Muhammad Rizky Pratama</span>
+<span class="font-caption text-caption text-text-secondary">NISN: 0087412984</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-body-medium">
+              SMP Negeri 1 Surabaya
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-badge-label text-badge-label bg-surface-container text-primary font-semibold">
+                Zonasi (980m)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-caption text-caption">
+              10 Mei 2026 <span class="block text-[11px]">10:24 WIB</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full font-badge-label text-badge-label bg-status-success-bg text-status-success-text font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Terverifikasi
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center justify-center gap-1.5">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary flex items-center justify-center transition-colors" title="Verifikasi Dokumen" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-warning-bg hover:bg-status-warning text-status-warning-text hover:text-white flex items-center justify-center transition-colors" title="Edit Data Siswa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-danger-bg hover:bg-status-danger text-status-danger-text hover:text-white flex items-center justify-center transition-colors" title="Hapus Berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono text-[13px] font-semibold text-primary">
+              PPDB-2026-0013
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-xs shrink-0">
+                  SA
+                </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-text-primary font-semibold">Siti Aisyah Azzahra</span>
+<span class="font-caption text-caption text-text-secondary">NISN: 0092183921</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-body-medium">
+              SMP Islam Terpadu Al-Hikmah
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-badge-label text-badge-label bg-status-info-bg text-status-info-text font-semibold">
+                Prestasi Akademik
+              </span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-caption text-caption">
+              10 Mei 2026 <span class="block text-[11px]">09:50 WIB</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full font-badge-label text-badge-label bg-status-warning-bg text-status-warning-text font-bold">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span> Pending
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center justify-center gap-1.5">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary flex items-center justify-center transition-colors" title="Verifikasi Dokumen" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-warning-bg hover:bg-status-warning text-status-warning-text hover:text-white flex items-center justify-center transition-colors" title="Edit Data Siswa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-danger-bg hover:bg-status-danger text-status-danger-text hover:text-white flex items-center justify-center transition-colors" title="Hapus Berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono text-[13px] font-semibold text-primary">
+              PPDB-2026-0014
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-status-warning text-white flex items-center justify-center font-bold text-xs shrink-0">
+                  DP
+                </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-text-primary font-semibold">Dimas Pratama Wijaya</span>
+<span class="font-caption text-caption text-text-secondary">NISN: 0081298412</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-body-medium">
+              SMP Negeri 12 Surabaya
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-badge-label text-badge-label bg-status-warning-bg text-status-warning-text font-semibold">
+                Perpindahan Tugas
+              </span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-caption text-caption">
+              10 Mei 2026 <span class="block text-[11px]">08:15 WIB</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full font-badge-label text-badge-label bg-status-danger-bg text-status-danger-text font-bold">
+<span class="material-symbols-outlined text-[14px]">cancel</span> Ditolak
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center justify-center gap-1.5">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary flex items-center justify-center transition-colors" title="Verifikasi Dokumen" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-warning-bg hover:bg-status-warning text-status-warning-text hover:text-white flex items-center justify-center transition-colors" title="Edit Data Siswa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-danger-bg hover:bg-status-danger text-status-danger-text hover:text-white flex items-center justify-center transition-colors" title="Hapus Berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono text-[13px] font-semibold text-primary">
+              PPDB-2026-0015
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-status-info-text text-white flex items-center justify-center font-bold text-xs shrink-0">
+                  AP
+                </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-text-primary font-semibold">Amanda Putri Lestari</span>
+<span class="font-caption text-caption text-text-secondary">NISN: 0094567823</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-body-medium">
+              SMP Muhammadiyah 2
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-badge-label text-badge-label bg-surface-container text-primary font-semibold">
+                Zonasi (420m)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-caption text-caption">
+              09 Mei 2026 <span class="block text-[11px]">17:40 WIB</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full font-badge-label text-badge-label bg-status-warning-bg text-status-warning-text font-bold">
+<span class="material-symbols-outlined text-[14px]">running_with_errors</span> Belum Lengkap
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center justify-center gap-1.5">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary flex items-center justify-center transition-colors" title="Verifikasi Dokumen" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-warning-bg hover:bg-status-warning text-status-warning-text hover:text-white flex items-center justify-center transition-colors" title="Edit Data Siswa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-danger-bg hover:bg-status-danger text-status-danger-text hover:text-white flex items-center justify-center transition-colors" title="Hapus Berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono text-[13px] font-semibold text-primary">
+              PPDB-2026-0016
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-status-success text-white flex items-center justify-center font-bold text-xs shrink-0">
+                  RP
+                </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-text-primary font-semibold">Rayhan Pratama Putra</span>
+<span class="font-caption text-caption text-text-secondary">NISN: 0089876541</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-body-medium">
+              SMP Negeri 4 Surabaya
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-badge-label text-badge-label bg-surface-variant text-on-secondary-fixed font-semibold">
+                Mutasi Tugas Orang Tua
+              </span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-caption text-caption">
+              09 Mei 2026 <span class="block text-[11px]">15:10 WIB</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full font-badge-label text-badge-label bg-status-success-bg text-status-success-text font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Terverifikasi
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center justify-center gap-1.5">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary flex items-center justify-center transition-colors" title="Verifikasi Dokumen" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-warning-bg hover:bg-status-warning text-status-warning-text hover:text-white flex items-center justify-center transition-colors" title="Edit Data Siswa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-danger-bg hover:bg-status-danger text-status-danger-text hover:text-white flex items-center justify-center transition-colors" title="Hapus Berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono text-[13px] font-semibold text-primary">
+              PPDB-2026-0017
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs shrink-0">
+                  NH
+                </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-text-primary font-semibold">Nurul Hidayah Kusuma</span>
+<span class="font-caption text-caption text-text-secondary">NISN: 0093344556</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-body-medium">
+              SMP Negeri 6 Surabaya
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-badge-label text-badge-label bg-status-info-bg text-status-info-text font-semibold">
+                Prestasi Non-Akademik
+              </span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary font-caption text-caption">
+              09 Mei 2026 <span class="block text-[11px]">14:22 WIB</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full font-badge-label text-badge-label bg-status-warning-bg text-status-warning-text font-bold">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span> Pending
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center justify-center gap-1.5">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary flex items-center justify-center transition-colors" title="Verifikasi Dokumen" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-warning-bg hover:bg-status-warning text-status-warning-text hover:text-white flex items-center justify-center transition-colors" title="Edit Data Siswa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-status-danger-bg hover:bg-status-danger text-status-danger-text hover:text-white flex items-center justify-center transition-colors" title="Hapus Berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="mt-space-md pt-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm font-caption text-caption text-text-secondary">
+<div>
+        Menampilkan <span class="font-semibold text-text-primary" id="dashboardTableSummary">0 pendaftar</span>
+      </div>
+<div class="flex items-center gap-space-xs" id="dashboardPagination">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-outline-variant cursor-not-allowed flex items-center gap-1 font-body-medium text-body-medium" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Sebelumnya</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-body-medium text-body-medium font-bold shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded-lg text-text-secondary hover:bg-surface-container font-body-medium text-body-medium" type="button">2</button>
+<button class="w-8 h-8 rounded-lg text-text-secondary hover:bg-surface-container font-body-medium text-body-medium" type="button">3</button>
+<span class="px-1 text-text-secondary">...</span>
+<button class="w-8 h-8 rounded-lg text-text-secondary hover:bg-surface-container font-body-medium text-body-medium" type="button">208</button>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary flex items-center gap-1 font-body-medium text-body-medium transition-colors" type="button">
+<span>Selanjutnya</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

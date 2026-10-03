@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-container":"#2563eb","border-subtle":"#E2E8F0","status-danger-bg":"#FEE2E2","surface-container":"#e5eeff","on-secondary":"#ffffff","status-danger":"#DC2626","surface-container-high":"#dce9ff","secondary-fixed":"#dde1ff","surface-bg":"#F1F5F9","on-tertiary":"#ffffff","outline-variant":"#c3c6d7","surface-variant":"#d3e4fe","tertiary-fixed-dim":"#adc6ff","on-primary-fixed-variant":"#003ea8","surface-container-low":"#eff4ff","on-tertiary-fixed-variant":"#004395","on-primary":"#ffffff","error-container":"#ffdad6","surface-container-lowest":"#ffffff","banner-info-bg":"#EFF6FF","on-surface":"#0b1c30","secondary":"#3755c3","on-surface-variant":"#434655","primary":"#004ac6","status-success-bg":"#DCFCE7","inverse-surface":"#213145","status-warning-bg":"#FEF3C7","on-primary-fixed":"#00174b","text-secondary":"#64748B","status-warning-text":"#B45309","tertiary-container":"#0f69dc","status-info-bg":"#DBEAFE","text-primary":"#1E293B","background":"#f8f9ff","secondary-fixed-dim":"#b8c4ff","surface":"#f8f9ff","on-secondary-fixed-variant":"#173bab","on-background":"#0b1c30","status-success":"#16A34A","on-error":"#ffffff","surface-tint":"#0053db","on-error-container":"#93000a","primary-fixed-dim":"#b4c5ff","tertiary-fixed":"#d8e2ff","inverse-primary":"#b4c5ff","on-tertiary-fixed":"#001a42","status-danger-text":"#B91C1C","on-secondary-fixed":"#001453","primary-fixed":"#dbe1ff","on-primary-container":"#eeefff","on-secondary-container":"#00217a","status-info-text":"#1D4ED8","status-warning":"#F59E0B","tertiary":"#0051b1","secondary-container":"#708cfd","error":"#ba1a1a","surface-container-highest":"#d3e4fe","outline":"#737686","surface-bright":"#f8f9ff","on-tertiary-container":"#edf0ff","surface-dim":"#cbdbf5","status-success-text":"#15803D","inverse-on-surface":"#eaf1ff","surface-card":"#FFFFFF"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-sm":"1rem","gutter-sm":"1rem","margin":"1.5rem","space-xl":"2rem","space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1.5rem"},"fontFamily":{"caption":["Inter"],"stat-display":["Inter"],"body-base":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"body-medium":["Inter"],"badge-label":["Inter"],"table-header":["Inter"],"title-sm":["Inter"]},"fontSize":{"caption":["12px",{"lineHeight":"16px","fontWeight":"400"}],"stat-display":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-base":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"28px","fontWeight":"600"}],"body-medium":["14px",{"lineHeight":"20px","fontWeight":"500"}],"badge-label":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"table-header":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface-bg font-body-base text-text-primary antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-primary to-primary-container z-50 flex flex-col justify-between text-on-primary shadow-[0_4px_20px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-primary-fixed-dim/20"><img alt="Logo PPDB Online" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyBs7YUBmhZcOdreQjSxwxCk6pXtD-BQNLchW6Z0sVvi48hrMqip37MGhP9FnF81KPYfpcSmDAO8NXdIvSj78O_b8BzGqHs6yXnimmCWF3TWK7hM0QmvIyhPDOc6sRN8I6CSzlxfyTKZf8wU7rgQp8Q8sTXd3vktkLX4czl5SO5-vyUkF9cFbvBigNpdnT0G5u4_b_aDEEH8Bqsr2QF7ixvtmc519aMBcGc-6QWCB7OdZFUHTzxXF-"/><div class="flex flex-col leading-tight min-w-0"><span class="font-title-sm text-title-sm text-on-primary truncate tracking-tight font-bold">PPDB Online</span><span class="font-caption text-caption text-primary-fixed-dim truncate">Panel Admin Utama</span></div></div><nav class="flex flex-col gap-space-xs p-space-sm mt-space-sm" data-active-classes="bg-surface-container-lowest text-primary font-bold shadow-sm"><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="dashboard" href="pages/dashboard.html">Dashboard</a><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="data-pendaftar" href="pages/pendaftar.html">Data Pendaftar</a><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="verifikasi-berkas" href="pages/verifikasi.html">Verifikasi Berkas</a><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="seleksi-dan-kelulusan" href="pages/seleksi.html">Seleksi &amp; Kelulusan</a><a aria-current="page" class="px-space-md py-space-sm rounded-lg transition-all duration-150 bg-surface-container-lowest text-primary font-bold shadow-sm" data-path="master-gelombang" href="pages/gelombang.html">Master Gelombang</a><a class="px-space-md py-space-sm rounded-lg text-on-primary hover:bg-surface-container-lowest/15 hover:text-on-primary transition-all duration-150 font-body-medium text-body-medium" data-path="laporan" href="pages/laporan.html">Laporan</a></nav></div><div class="p-space-sm border-t border-primary-fixed-dim/20"><div class="flex items-center justify-between px-space-sm py-space-xs text-primary-fixed-dim font-caption text-caption"><span>Versi Sistem 2.4</span><span class="material-symbols-outlined text-[16px]">school</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card border-b border-border-subtle shadow-[0_1px_3px_0_rgba(0,0,0,0.05),0_1px_2px_-1px_rgba(0,0,0,0.05)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-body-medium text-body-medium"><span class="hover:text-text-primary cursor-pointer">Administrasi</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-primary font-semibold">Portal Penerimaan</span></div><div class="relative w-80 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md bg-surface-card border border-border-subtle rounded-lg text-text-primary placeholder:text-text-secondary font-body-base text-body-base focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/15 transition-all" placeholder="Cari NISN, nama pendaftar..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><button aria-label="Notifikasi antrean berkas" class="relative p-space-xs rounded-lg text-text-secondary hover:bg-surface-container-low hover:text-text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute -top-1 -right-1 bg-status-danger text-on-error font-badge-label text-badge-label px-1.5 py-0.5 rounded-full ring-2 ring-surface-card min-w-[20px] text-center">125</span></button></div><div class="h-8 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right leading-tight"><span class="font-title-sm text-body-medium font-semibold text-text-primary">Admin PPDB</span><span class="font-caption text-caption text-text-secondary">Operator Pusat</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5-sRRs0xJPJzyBqC6UJEg1QnTcKHr_NFrNsnIHstXEIToPsPAAmemR05QHMVNSUEKAlSLjlkvdB_7SxYGOKC2h-9d-Igi-5q8kawunV4D55WTHgw04y5BhwJa7_WP0GXzTBWgmNmRydTNt_8UihyLFEBeWXD2TJV-9eIPwwCZGxOC_3w0nceP4EiY-hWyw7YveOVbZ3nDOJSQPRkHH6vIsVOXIEoadbkCv5JgYjBDM09PL_0Xw4ue"/></div></div></header><main class="w-full pt-16 bg-surface-bg min-h-screen px-gutter py-gutter"><div class="flex flex-col w-full">
+<!-- Header Page & Primary Actions -->
+<script src="navigation.js"></script>
+<script src="ppdb-data.js"></script>
+<script src="page-features.js"></script>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-caption text-caption text-primary font-semibold tracking-wider uppercase">Tahun Ajaran 2026/2027</span>
+<span class="text-text-secondary">•</span>
+<span class="font-caption text-caption text-text-secondary">Jenjang SMA/SMK Negeri Terpadu</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight font-bold">Master Periode &amp; Gelombang Pendaftaran</h1>
+<p class="font-body-base text-body-base text-text-secondary mt-0.5">Atur jadwal pembukaan gelombang pendaftaran, alokasi pagu kuota, dan status aktifasi PPDB 2026/2027</p>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-card text-text-primary hover:bg-surface-container-low shadow-sm transition-all duration-150 font-body-medium text-body-medium" id="btn-kalender">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">calendar_month</span>
+        Atur Kalender Akademik
+      </button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary shadow-sm transition-all duration-150 font-body-medium text-body-medium font-semibold" id="btn-tambah-gelombang">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Atur Gelombang Khusus
+      </button>
+</div>
+</div>
+<!-- Top Overview Banner (Gelombang Aktif) -->
+<div class="relative overflow-hidden rounded-xl bg-surface-card shadow-sm p-space-lg mb-space-xl">
+<div class="absolute -right-12 -top-12 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg relative z-10">
+<div class="flex flex-col md:flex-row items-start md:items-center gap-space-lg flex-1">
+<div class="w-16 h-16 rounded-xl bg-primary-container/10 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[36px]">campaign</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-status-success-bg text-status-success-text font-badge-label text-badge-label font-bold">
+<span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+              <span id="activeWaveBanner">GELOMBANG I SEDANG BERJALAN</span>
+            </span>
+<span class="px-2.5 py-0.5 rounded-md bg-banner-info-bg text-status-info-text font-caption text-caption font-semibold" id="activeWaveDaysLeft"></span>
+</div>
+<p class="font-title-sm text-title-sm text-text-primary font-bold mt-1" id="activeWaveDateRange">Periode pendaftaran</p>
+<p class="font-body-base text-body-base text-text-secondary" id="activeWaveDescription">Status pendaftaran mengikuti pengaturan gelombang tersimpan.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md bg-surface-bg/70 p-space-md rounded-xl xl:w-auto w-full justify-between">
+<div class="flex flex-col px-space-sm">
+<span class="font-caption text-caption text-text-secondary">Total Pendaftar Masuk</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-stat-display text-stat-display text-text-primary" id="waveTotalApplicants">0</span>
+<span class="font-caption text-caption text-text-secondary font-medium">Siswa</span>
+</div>
+<span class="font-caption text-caption text-status-success-text font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">sync</span> Terhubung ke data pendaftar
+          </span>
+</div>
+<div class="w-px h-12 bg-border-subtle hidden sm:block"></div>
+<div class="flex flex-col px-space-sm min-w-[200px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-caption text-caption text-text-secondary">Pagu Kuota Terisi</span>
+<span class="font-caption text-caption font-bold text-primary" id="waveOccupancyPercent">0%</span>
+</div>
+<div class="w-full bg-border-subtle h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" id="waveOccupancyProgress" style="width: 0%"></div>
+</div>
+<span class="font-caption text-caption text-text-secondary mt-1 font-medium" id="waveOccupancySummary">0 terverifikasi dari 0 kuota</span>
+</div>
+<div class="flex items-center">
+<button class="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-surface-card hover:bg-surface-container-low text-primary font-body-medium text-body-medium shadow-sm flex items-center justify-center gap-1.5 transition-colors" onclick="document.getElementById('quick-quota-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+            Atur Pagu
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Cards Grid Gelombang & Visual Context -->
+<div class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary">Daftar Gelombang PPDB 2026</h2>
+<p class="font-caption text-caption text-text-secondary">Visualisasi tahapan pendaftaran, batas waktu, dan kapasitas penerimaan peserta didik.</p>
+</div>
+<span class="font-caption text-caption text-text-secondary bg-surface-card px-3 py-1 rounded-full shadow-sm">Total 3 Periode Dikonfigurasi</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg">
+<!-- Card 1: Gelombang I (AKTIF) -->
+<div class="rounded-xl bg-surface-card shadow-sm p-space-lg flex flex-col justify-between relative overflow-hidden transition-all duration-200 hover:shadow-md">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-status-success"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-status-success-bg text-status-success-text font-badge-label text-badge-label font-bold flex items-center gap-1" id="wave1StatusLabel">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              AKTIF / BUKA
+            </span>
+<span class="font-caption text-caption font-semibold text-text-secondary">Tahap I</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-text-primary font-bold mb-1" id="wave1Title">Gelombang I - Jalur Reguler &amp; Prestasi</h3>
+<p class="font-caption text-caption text-text-secondary mb-space-md">Fokus penerimaan domisili terdekat serta capaian prestasi akademik maupun non-akademik.</p>
+<!-- Timeline Metrics -->
+<div class="bg-surface-bg rounded-lg p-space-sm mb-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between text-text-secondary font-caption text-caption">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-text-secondary">date_range</span> Pendaftaran</span>
+<span class="font-semibold text-text-primary" id="wave1Schedule">01 Mei - 20 Mei 2026</span>
+</div>
+<div class="flex items-center justify-between text-text-secondary font-caption text-caption">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-text-secondary">notifications_active</span> Pengumuman</span>
+<span class="font-semibold text-text-primary">23 Mei 2026</span>
+</div>
+<div class="flex items-center justify-between text-text-secondary font-caption text-caption">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-text-secondary">how_to_reg</span> Daftar Ulang</span>
+<span class="font-semibold text-text-primary">25 - 28 Mei 2026</span>
+</div>
+</div>
+<!-- Kuota Details -->
+<div class="mb-space-md">
+<div class="flex justify-between items-center mb-1">
+<span class="font-caption text-caption text-text-secondary">Alokasi Kuota Terverifikasi</span>
+<span class="font-body-medium text-body-medium font-bold text-text-primary" id="wave1CardCount">0 / 800</span>
+</div>
+<div class="w-full bg-border-subtle h-2 rounded-full overflow-hidden">
+<div class="bg-status-success h-full rounded-full" id="wave1CardProgress" style="width: 0%"></div>
+</div>
+<div class="flex justify-between text-caption font-caption text-text-secondary mt-1">
+<span id="wave1CardPercent">0% Terisi</span>
+<span id="wave1CardRemaining">Sisa 800 Kursi</span>
+</div>
+</div>
+<!-- Jalur Chips -->
+<div class="mb-space-lg">
+<span class="font-caption text-caption text-text-secondary block mb-1.5 font-medium">Jalur Dibuka:</span>
+<div class="flex flex-wrap gap-1.5" id="wave1Pathways">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary text-caption font-caption font-medium">Zonasi Reguler</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary text-caption font-caption font-medium">Prestasi Akademik</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary text-caption font-caption font-medium">Prestasi Olahraga &amp; Seni</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-space-md flex flex-col gap-2">
+<div class="grid grid-cols-2 gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-bg hover:bg-surface-container-low text-text-primary font-body-medium text-body-medium text-center transition-colors" data-edit-wave="1" type="button">
+              Edit Detail
+            </button>
+<a class="px-3 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary font-body-medium text-body-medium text-center transition-colors" data-path="data-pendaftar" href="datapendaftar.html?wave=1">
+              Pendaftar (<span id="wave1ApplicantCount">0</span>)
+            </a>
+</div>
+<button class="w-full px-3 py-2 rounded-lg bg-status-danger-bg hover:bg-red-100 text-status-danger-text font-body-medium text-body-medium font-medium transition-colors flex items-center justify-center gap-1.5" data-toggle-wave="1" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+            Tutup Pendaftaran Manual
+          </button>
+</div>
+</div>
+<!-- Card 2: Gelombang II (SEGERA DIBUKA) -->
+<div class="rounded-xl bg-surface-card shadow-sm p-space-lg flex flex-col justify-between relative overflow-hidden transition-all duration-200 hover:shadow-md">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-status-warning"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-status-warning-bg text-status-warning-text font-badge-label text-badge-label font-bold flex items-center gap-1" id="wave2StatusLabel">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+              SEGERA DIBUKA
+            </span>
+<span class="font-caption text-caption font-semibold text-text-secondary">Tahap II</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-text-primary font-bold mb-1" id="wave2Title">Gelombang II - Pemenuhan Pagu</h3>
+<p class="font-caption text-caption text-text-secondary mb-space-md">Dipersiapkan bagi siswa keluarga ekonomi rentan, mutasi wali, serta pemerataan nilai raport.</p>
+<!-- Timeline Metrics -->
+<div class="bg-surface-bg rounded-lg p-space-sm mb-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between text-text-secondary font-caption text-caption">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-text-secondary">date_range</span> Pendaftaran</span>
+<span class="font-semibold text-text-primary" id="wave2Schedule">15 Juni - 28 Juni 2026</span>
+</div>
+<div class="flex items-center justify-between text-text-secondary font-caption text-caption">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-text-secondary">notifications_active</span> Pengumuman</span>
+<span class="font-semibold text-text-primary">01 Juli 2026</span>
+</div>
+<div class="flex items-center justify-between text-text-secondary font-caption text-caption">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-text-secondary">how_to_reg</span> Daftar Ulang</span>
+<span class="font-semibold text-text-primary">03 - 05 Juli 2026</span>
+</div>
+</div>
+<!-- Kuota Details -->
+<div class="mb-space-md">
+<div class="flex justify-between items-center mb-1">
+<span class="font-caption text-caption text-text-secondary">Kapasitas Alokasi Pagu</span>
+<span class="font-body-medium text-body-medium font-bold text-text-primary" id="wave2CardQuota">200 Siswa</span>
+</div>
+<div class="w-full bg-border-subtle h-2 rounded-full overflow-hidden">
+<div class="bg-status-warning h-full rounded-full" style="width: 0%"></div>
+</div>
+<div class="flex justify-between text-caption font-caption text-text-secondary mt-1">
+<span id="wave2CardApplicantCount">0 pendaftar</span>
+<span id="wave2CardVerifiedCount">0 terverifikasi</span>
+</div>
+</div>
+<!-- Jalur Chips -->
+<div class="mb-space-lg">
+<span class="font-caption text-caption text-text-secondary block mb-1.5 font-medium">Jalur Dibuka:</span>
+<div class="flex flex-wrap gap-1.5" id="wave2Pathways">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary text-caption font-caption font-medium">Perpindahan Tugas Ortu</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary text-caption font-caption font-medium">Nilai Rapor Terpadu</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-space-md flex flex-col gap-2">
+<div class="grid grid-cols-2 gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-bg hover:bg-surface-container-low text-text-primary font-body-medium text-body-medium text-center transition-colors" data-edit-wave="2" type="button">
+              Edit Jadwal
+            </button>
+<button class="px-3 py-2 rounded-lg bg-surface-bg hover:bg-surface-container-low text-text-primary font-body-medium text-body-medium text-center transition-colors" onclick="document.getElementById('quick-quota-modal').classList.remove('hidden')" type="button">
+              Ubah Kuota
+            </button>
+</div>
+<button class="w-full px-3 py-2 rounded-lg bg-status-success text-on-primary hover:bg-green-700 font-body-medium text-body-medium font-medium transition-colors flex items-center justify-center gap-1.5 shadow-sm" data-toggle-wave="2" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+            Buka Pendaftaran Sekarang
+          </button>
+</div>
+</div>
+<!-- Card 3: Gelombang Khusus (DRAFT / NON-AKTIF) -->
+<div class="rounded-xl bg-surface-card shadow-sm p-space-lg flex flex-col justify-between relative overflow-hidden transition-all duration-200 hover:shadow-md opacity-90">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-outline"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-secondary font-badge-label text-badge-label font-bold flex items-center gap-1" id="waveSpecialStatusLabel">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+              DRAFT / NON-AKTIF
+            </span>
+<span class="font-caption text-caption font-semibold text-text-secondary">Tahap Khusus</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-text-primary font-bold mb-1" id="waveSpecialTitle">Gelombang Khusus - Kerjasama &amp; Inklusi</h3>
+<p class="font-caption text-caption text-text-secondary mb-space-md">Tahap khusus dapat dibuka dengan jadwal, kuota, dan jalur yang diatur panitia.</p>
+<!-- Timeline Metrics -->
+<div class="bg-surface-bg rounded-lg p-space-sm mb-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between text-text-secondary font-caption text-caption">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-text-secondary">schedule</span> Jadwal Pelaksanaan</span>
+<span class="font-medium text-text-secondary" id="waveSpecialSchedule">Belum dijadwalkan</span>
+</div>
+<div class="flex items-center justify-between text-text-secondary font-caption text-caption">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-text-secondary">domain</span> Mitra Lembaga</span>
+<span class="font-semibold text-text-primary">Dinas Sosial &amp; PLB</span>
+</div>
+<div class="flex items-center justify-between text-text-secondary font-caption text-caption">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-text-secondary">assignment_turned_in</span> Validasi</span>
+<span class="font-semibold text-text-primary">Komite Terpadu</span>
+</div>
+</div>
+<!-- Kuota Details -->
+<div class="mb-space-md">
+<div class="flex justify-between items-center mb-1">
+<span class="font-caption text-caption text-text-secondary">Pagu Khusus Tersedia</span>
+<span class="font-body-medium text-body-medium font-bold text-text-primary" id="waveSpecialCardQuota">50 Siswa</span>
+</div>
+<div class="w-full bg-border-subtle h-2 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 0%"></div>
+</div>
+<div class="flex justify-between text-caption font-caption text-text-secondary mt-1">
+<span id="waveSpecialApplicantCount">0 pendaftar</span>
+<span>Data jalur khusus</span>
+</div>
+</div>
+<!-- Jalur Chips -->
+<div class="mb-space-lg">
+<span class="font-caption text-caption text-text-secondary block mb-1.5 font-medium">Jalur Khusus:</span>
+<div class="flex flex-wrap gap-1.5" id="waveSpecialPathways">
+<span class="px-2 py-0.5 rounded-md bg-surface-bg text-text-secondary text-caption font-caption font-medium">Inklusi &amp; Disabilitas</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-bg text-text-secondary text-caption font-caption font-medium">Mitra Daerah Perbatasan</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-space-md flex flex-col gap-2">
+<button class="w-full px-3 py-2 rounded-lg bg-surface-bg hover:bg-surface-container-low text-text-primary font-body-medium text-body-medium transition-colors flex items-center justify-center gap-1.5" data-edit-wave="khusus" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+            Lengkapi Konfigurasi Draft
+          </button>
+<button class="w-full px-3 py-2 rounded-lg bg-primary-container/10 hover:bg-primary-container/20 text-primary font-body-medium text-body-medium font-medium transition-colors flex items-center justify-center gap-1.5" data-toggle-wave="khusus" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+            Terbitkan Jadwal Periode
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Section: Detail Alokasi Jalur & Real-Time Monitoring -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left 8 cols: Tabel Rincian Alokasi Kuota & Jalur -->
+<div class="xl:col-span-8 rounded-xl bg-surface-card shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h3 class="font-title-sm text-title-sm text-text-primary font-bold">Rincian Alokasi Kuota per Jalur Pendaftaran</h3>
+<p class="font-caption text-caption text-text-secondary">Pagu kuota otomatis mengunci jika pendaftar terverifikasi memenuhi kapasitas.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-bg text-text-secondary hover:text-text-primary font-body-medium text-body-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_download</span> Unduh Excel
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-body-medium text-body-medium flex items-center gap-1" onclick="document.getElementById('quick-quota-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[16px]">add</span> Tambah Jalur
+            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-bg text-text-secondary font-table-header text-table-header uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Jalur Pendaftaran</th>
+<th class="py-3 px-4">Pendaftar</th>
+<th class="py-3 px-4">Terverifikasi</th>
+<th class="py-3 px-4">Keterisian</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Proporsi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-base text-body-base" id="quotaPathwayTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-text-primary">Zonasi Radius Domisili</span>
+<span class="font-caption text-caption text-text-secondary">Gelombang I (Reguler)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-text-primary">400 siswa</td>
+<td class="py-3.5 px-4 text-text-secondary">620 berkas</td>
+<td class="py-3.5 px-4 text-status-success font-medium">392 siswa</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-border-subtle h-2 rounded-full overflow-hidden">
+<div class="bg-status-success h-full rounded-full" style="width: 98%"></div>
+</div>
+<span class="font-caption text-caption font-bold text-text-primary">98%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-border-subtle peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded text-text-secondary hover:text-primary hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded text-text-secondary hover:text-status-danger hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-text-primary">Prestasi Akademik (Nilai Rapor)</span>
+<span class="font-caption text-caption text-text-secondary">Gelombang I (Reguler)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-text-primary">250 siswa</td>
+<td class="py-3.5 px-4 text-text-secondary">410 berkas</td>
+<td class="py-3.5 px-4 text-status-success font-medium">238 siswa</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-border-subtle h-2 rounded-full overflow-hidden">
+<div class="bg-status-success h-full rounded-full" style="width: 95.2%"></div>
+</div>
+<span class="font-caption text-caption font-bold text-text-primary">95%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-border-subtle peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded text-text-secondary hover:text-primary hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded text-text-secondary hover:text-status-danger hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-text-primary">Prestasi Kejuaraan &amp; Olahraga</span>
+<span class="font-caption text-caption text-text-secondary">Gelombang I (Reguler)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-text-primary">150 siswa</td>
+<td class="py-3.5 px-4 text-text-secondary">218 berkas</td>
+<td class="py-3.5 px-4 text-status-success font-medium">120 siswa</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-border-subtle h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 80%"></div>
+</div>
+<span class="font-caption text-caption font-bold text-text-primary">80%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-border-subtle peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded text-text-secondary hover:text-primary hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded text-text-secondary hover:text-status-danger hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-text-primary">Jalur lainnya</span>
+<span class="font-caption text-caption text-text-secondary">Gelombang II (Pemenuhan)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-text-primary">120 siswa</td>
+<td class="py-3.5 px-4 text-text-secondary">0 berkas</td>
+<td class="py-3.5 px-4 text-text-secondary">0 siswa</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-border-subtle h-2 rounded-full overflow-hidden">
+<div class="bg-status-warning h-full rounded-full" style="width: 0%"></div>
+</div>
+<span class="font-caption text-caption font-bold text-text-secondary">0%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-border-subtle peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded text-text-secondary hover:text-primary hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded text-text-secondary hover:text-status-danger hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-text-primary">Inklusi &amp; Kemitraan Khusus</span>
+<span class="font-caption text-caption text-text-secondary">Gelombang Khusus (Draft)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-text-primary">50 siswa</td>
+<td class="py-3.5 px-4 text-text-secondary">0 berkas</td>
+<td class="py-3.5 px-4 text-text-secondary">0 siswa</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-border-subtle h-2 rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 0%"></div>
+</div>
+<span class="font-caption text-caption font-bold text-text-secondary">0%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer opacity-60">
+<input class="sr-only peer" disabled="" type="checkbox"/>
+<div class="w-9 h-5 bg-border-subtle peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded text-text-secondary hover:text-primary hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded text-text-secondary hover:text-status-danger hover:bg-surface-bg"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-space-md pt-space-md flex flex-col sm:flex-row items-center justify-between text-caption font-caption text-text-secondary gap-2">
+<span id="quotaPathwaySummary">Distribusi dihitung dari data pendaftar tersimpan</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-bg hover:bg-surface-container-low text-text-primary disabled:opacity-50" disabled="">Sebelumnya</button>
+<span class="px-2 font-semibold text-text-primary">1</span>
+<button class="px-2 py-1 rounded bg-surface-bg hover:bg-surface-container-low text-text-primary">Berikutnya</button>
+</div>
+</div>
+</div>
+<!-- Right 4 cols: Quick Parameter Control & Pagu Summary -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Panel Total Pagu Sekolah -->
+<div class="rounded-xl bg-surface-card shadow-sm p-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-title-sm text-title-sm text-text-primary font-bold">Total Pagu Sekolah</h3>
+<span class="px-2 py-0.5 rounded bg-primary-container/10 text-primary font-caption text-caption font-semibold">SK Kadisdik 2026</span>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="font-stat-display text-stat-display text-primary" id="overallQuotaDisplay">1,050</span>
+<span class="font-body-base text-body-base text-text-secondary font-medium">Total Kursi Peserta</span>
+</div>
+<!-- SVG Donut Breakdown Diagram -->
+<div class="flex items-center gap-space-md my-space-md p-space-sm bg-surface-bg rounded-xl">
+<div class="relative w-24 h-24 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36" id="quotaBreakdownDonut">
+<!-- Background Circle -->
+<path class="text-border-subtle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<!-- Gelombang I: 800 / 1050 = 76.1% -->
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="76.1, 100" stroke-linecap="round" stroke-width="4"></path>
+<!-- Gelombang II: 200 / 1050 = 19% -->
+<path class="text-status-warning" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="19, 100" stroke-dashoffset="-76.1" stroke-linecap="round" stroke-width="4"></path>
+<path class="text-outline" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="4.8, 100" stroke-dashoffset="-95.1" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-[12px] font-bold text-text-primary leading-none" id="overallQuotaDonutLabel">1,050</span>
+<span class="text-[9px] text-text-secondary leading-tight">Kursi</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 text-caption font-caption w-full">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<span class="text-text-secondary truncate">Gelombang I</span>
+</div>
+<span class="font-bold text-text-primary" id="quotaLegendWave1">800</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-warning shrink-0"></span>
+<span class="text-text-secondary truncate">Gelombang II</span>
+</div>
+<span class="font-bold text-text-primary" id="quotaLegendWave2">200</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-outline shrink-0"></span>
+<span class="text-text-secondary truncate">Inklusi / Mitra</span>
+</div>
+<span class="font-bold text-text-primary" id="quotaLegendSpecial">50</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-caption font-caption text-text-secondary">
+<span>Rasio Pendaftar saat ini:</span>
+<span class="font-bold text-status-success-text" id="waveApplicantQuotaRatio">0.00x</span>
+</div>
+<button class="w-full py-2 bg-surface-bg hover:bg-surface-container-low text-text-primary font-body-medium text-body-medium rounded-lg transition-colors flex items-center justify-center gap-1" onclick="document.getElementById('quick-quota-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[16px]">settings_input_component</span>
+            Konfigurasi Parameter Pagu
+          </button>
+</div>
+</div>
+<!-- Live Notification Banner & Audit Trail -->
+<div class="rounded-xl bg-banner-info-bg shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-status-info-text mb-2">
+<span class="material-symbols-outlined text-[20px]">info</span>
+<span class="font-title-sm text-title-sm font-bold">Catatan Kebijakan Zonasi</span>
+</div>
+<p class="font-caption text-caption text-text-secondary leading-relaxed mb-space-md">
+            Ringkasan jalur dan jumlah pendaftar pada halaman ini dihitung dari record pendaftar tersimpan. Pagu total mengikuti pengaturan kuota per gelombang.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-caption text-caption text-status-info-text font-semibold">Status Kepatuhan Regulasi</span>
+<span class="px-2 py-0.5 rounded-full bg-status-info-bg text-status-info-text text-badge-label font-badge-label font-bold">Data tersimpan</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Settings / Quota Modal Dialog -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs" id="quick-quota-modal">
+<div class="relative w-full max-w-2xl bg-surface-card rounded-xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-bg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">tune</span>
+<h3 class="font-title-sm text-title-sm text-text-primary font-bold">Pengaturan Kuota Cepat &amp; Parameter Gelombang</h3>
+</div>
+<button class="text-text-secondary hover:text-text-primary p-1 rounded-lg" onclick="document.getElementById('quick-quota-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-lg space-y-space-md max-h-[75vh] overflow-y-auto">
+<div class="p-3 bg-banner-info-bg rounded-lg text-caption font-caption text-status-info-text flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] shrink-0 mt-0.5">help</span>
+<span>Perubahan pada modal ini akan langsung mempengaruhi rumus filtering seleksi otomatis dan passing grade pendaftar pada sistem kelulusan.</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Parameter 1: Total Pagu -->
+<div class="flex flex-col gap-1">
+<label class="font-body-medium text-body-medium font-semibold text-text-primary">Pagu Total Sekolah</label>
+<span class="font-caption text-caption text-text-secondary">Kapasitas rombel keseluruhan</span>
+<div class="relative mt-1">
+<input class="w-full h-10 px-3 bg-surface-card rounded-lg font-body-base text-body-base text-text-primary focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="quotaTotal" type="number" value="1050" readonly/>
+<span class="absolute right-3 top-2.5 text-caption font-caption text-text-secondary">Siswa</span>
+</div>
+</div>
+<!-- Parameter 2: Radius Zonasi -->
+<div class="flex flex-col gap-1">
+<label class="font-body-medium text-body-medium font-semibold text-text-primary">Batas Toleransi Radius Zonasi</label>
+<span class="font-caption text-caption text-text-secondary">Jarak maksimal geolokasi titik domisili</span>
+<div class="relative mt-1">
+<input class="w-full h-10 px-3 bg-surface-card rounded-lg font-body-base text-body-base text-text-primary focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" step="0.5" type="number" value="4.5"/>
+<span class="absolute right-3 top-2.5 text-caption font-caption text-text-secondary">Kilometer (KM)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-space-md rounded-lg bg-surface-bg p-space-md sm:grid-cols-3">
+<label class="text-sm font-medium text-slate-700">Kuota Gelombang I<input class="mt-1 w-full rounded-lg border-slate-300 text-sm" id="quotaWave1" type="number" min="0" step="1" value="800"></label>
+<label class="text-sm font-medium text-slate-700">Kuota Gelombang II<input class="mt-1 w-full rounded-lg border-slate-300 text-sm" id="quotaWave2" type="number" min="0" step="1" value="200"></label>
+<label class="text-sm font-medium text-slate-700">Kuota Gelombang Khusus<input class="mt-1 w-full rounded-lg border-slate-300 text-sm" id="quotaWaveSpecial" type="number" min="0" step="1" value="50"></label>
+</div>
+<!-- Bobot Skor Seleksi -->
+<div class="pt-2">
+<h4 class="font-body-medium text-body-medium font-semibold text-text-primary mb-1">Pembobotan Skor Prestasi (Gelombang I &amp; II)</h4>
+<p class="font-caption text-caption text-text-secondary mb-3">Tentukan persentase nilai akumulasi seleksi jalur campuran non-zonasi.</p>
+<div class="space-y-3 bg-surface-bg p-space-md rounded-lg">
+<div>
+<div class="flex justify-between font-caption text-caption mb-1">
+<span class="font-semibold text-text-primary">Nilai Rata-rata Rapor (Sem 1-5)</span>
+<span class="font-bold text-primary">60%</span>
+</div>
+<input class="w-full h-2 bg-border-subtle rounded-lg appearance-none cursor-pointer accent-primary" max="100" min="0" type="range" value="60"/>
+</div>
+<div>
+<div class="flex justify-between font-caption text-caption mb-1">
+<span class="font-semibold text-text-primary">Skor Sertifikat Kejuaraan / Portofolio</span>
+<span class="font-bold text-primary">30%</span>
+</div>
+<input class="w-full h-2 bg-border-subtle rounded-lg appearance-none cursor-pointer accent-primary" max="100" min="0" type="range" value="30"/>
+</div>
+<div>
+<div class="flex justify-between font-caption text-caption mb-1">
+<span class="font-semibold text-text-primary">Tes Potensi Akademik / Uji Minat</span>
+<span class="font-bold text-primary">10%</span>
+</div>
+<input class="w-full h-2 bg-border-subtle rounded-lg appearance-none cursor-pointer accent-primary" max="100" min="0" type="range" value="10"/>
+</div>
+</div>
+</div>
+<!-- Auto Wave Lock Option -->
+<div class="flex items-center justify-between p-space-sm bg-surface-bg rounded-lg">
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-text-primary">Auto-Lock Kuota Penuh</span>
+<span class="font-caption text-caption text-text-secondary">Otomatis nonaktifkan pendaftaran jika pagu 100% terisi</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-border-subtle peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-space-lg py-space-md bg-surface-bg flex items-center justify-end gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-card text-text-secondary hover:text-text-primary font-body-medium text-body-medium shadow-sm transition-colors" onclick="document.getElementById('quick-quota-modal').classList.add('hidden')">
+          Batal
+        </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-body-medium text-body-medium font-semibold shadow-sm transition-colors flex items-center gap-1" id="saveQuotaSettings" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+          Simpan Parameter
+        </button>
+</div>
+</div>
+</div>
+<script>
+    // Simple interactions for the Master Gelombang panel
+    const btnTambahGelombang = document.getElementById('btn-tambah-gelombang');
+    if (btnTambahGelombang) btnTambahGelombang.addEventListener('click', () => document.querySelector('[data-edit-wave="khusus"]')?.click());
+  </script>
+</div></main></div></body></html>
