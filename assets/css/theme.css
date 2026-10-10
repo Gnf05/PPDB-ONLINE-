@@ -28,6 +28,12 @@ html { background: var(--ppdb-canvas); }
 body { color: var(--ppdb-ink); background-color: var(--ppdb-canvas); }
 html:not([data-ppdb-ready="true"][data-navigation-ready="true"]) body > aside,
 html:not([data-ppdb-ready="true"][data-navigation-ready="true"]) body > div.pl-64 { visibility: hidden; }
+html[data-ppdb-ready="true"][data-navigation-ready="true"] body > div.pl-64 { animation: ppdb-page-enter .34s ease-out both; }
+html[data-ppdb-ready="true"][data-navigation-ready="true"] body > aside { animation: ppdb-sidebar-enter .3s ease-out both; }
+.ppdb-scroll-reveal { opacity: 0; transform: translateY(16px); transition: opacity .48s ease, transform .48s cubic-bezier(.2,.7,.2,1); }
+.ppdb-scroll-reveal.ppdb-reveal-visible { opacity: 1; transform: translateY(0); }
+@keyframes ppdb-page-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ppdb-sidebar-enter { from { opacity: 0; } to { opacity: 1; } }
 button, input, select, textarea { font: inherit; }
 button { transition: background-color .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease, transform .18s ease; }
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid color-mix(in srgb, var(--ppdb-accent) 38%, transparent); outline-offset: 2px; }
@@ -214,4 +220,8 @@ html[data-theme="dark"] body > aside { background: #101915 !important; }
   body:not(:has(> div.pl-64)) > aside > div > div:first-child { min-width: 0; }
   body:not(:has(> div.pl-64)) > aside > div > button { flex: 0 0 auto; }
   body:not(:has(> div.pl-64)) > aside .hidden.sm\\:flex { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }

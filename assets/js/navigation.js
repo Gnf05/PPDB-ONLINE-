@@ -272,6 +272,43 @@
       });
     }
     document.documentElement.dataset.navigationReady = 'true';
+    let readyObserver;
+    const revealWhenReady = () => {
+      if (document.documentElement.dataset.ppdbReady !== 'true') return;
+      readyObserver?.disconnect();
+      window.requestAnimationFrame(setupScrollReveals);
+    };
+    if (document.documentElement.dataset.ppdbReady === 'true') {
+      revealWhenReady();
+    } else {
+      readyObserver = new MutationObserver(revealWhenReady);
+      readyObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-ppdb-ready'] });
+    }
+  }
+
+  function setupScrollReveals() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const sections = [...document.querySelectorAll('body > div.pl-64 > main section')].slice(2);
+    const pending = new Set(sections);
+    document.documentElement.dataset.scrollRevealTargets = String(pending.size);
+    if (!pending.size) return;
+    pending.forEach(section => {
+      section.classList.add('ppdb-scroll-reveal');
+    });
+    const revealVisibleSections = () => {
+      pending.forEach(section => {
+        if (section.getBoundingClientRect().top > window.innerHeight * 0.9) return;
+        section.classList.add('ppdb-reveal-visible');
+        pending.delete(section);
+      });
+      if (!pending.size) {
+        window.removeEventListener('scroll', revealVisibleSections);
+        window.removeEventListener('resize', revealVisibleSections);
+      }
+    };
+    window.addEventListener('scroll', revealVisibleSections, { passive: true });
+    window.addEventListener('resize', revealVisibleSections);
+    window.requestAnimationFrame(revealVisibleSections);
   }
 
   function escapeHtml(value) {
