@@ -310,5 +310,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     initVerification();
     initSelection();
+    document.documentElement.dataset.ppdbReady = 'true';
   }, { once: true });
 })();

@@ -520,14 +520,6 @@
       setText('dashboardTrendAverage', `Rerata: ${(dailyTotal / 10).toFixed(1)} siswa/hari`);
       setText('dashboardQueueCount', pending);
 
-      const notificationCount = store.getUnreadNotifications(getRole()).length;
-      const notificationButton = document.getElementById('dashboardNotificationButton') || document.querySelector('button[aria-label="Notifikasi antrean berkas"], button[aria-label="Aktivitas terbaru dari Admin"]');
-      const notificationBadge = notificationButton?.querySelector('span.bg-status-danger');
-      if (notificationBadge) {
-        notificationBadge.textContent = notificationCount;
-        notificationBadge.classList.toggle('hidden', notificationCount === 0);
-      }
-
       const query = (document.getElementById('kepsekSearch')?.value || '').trim().toLowerCase();
       const pathway = document.getElementById('kepsekPathFilter')?.value || '';
       const filtered = applicants.filter(item => {
@@ -554,33 +546,8 @@
       const pagination = document.getElementById('dashboardPagination');
       if (pagination) pagination.innerHTML = `<button class="rounded-lg px-3 py-2 text-sm text-slate-700 disabled:text-slate-400" data-dashboard-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>Sebelumnya</button><span class="px-2 text-sm font-semibold">${currentPage} / ${pages}</span><button class="rounded-lg px-3 py-2 text-sm text-slate-700 disabled:text-slate-400" data-dashboard-page="${currentPage + 1}" ${currentPage === pages ? 'disabled' : ''}>Selanjutnya</button>`;
 
-      const roleNotifications = store.getNotifications(getRole()).slice(0, 20);
-      const notificationPanel = document.getElementById('roleNotificationPanel');
-      if (notificationPanel) {
-        notificationPanel.innerHTML = roleNotifications.length ? roleNotifications.map(item => `<article class="border-b border-slate-100 px-4 py-3 last:border-0"><p class="text-sm font-medium text-slate-800">${escapeHtml(item.applicantName || item.registrationNo || 'Data PPDB')} · ${escapeHtml(item.action)}</p><p class="mt-1 text-xs text-slate-500">${escapeHtml(item.registrationNo)} · ${escapeHtml(item.actor || 'Operator')} · ${escapeHtml(dateText(item.timestamp))}</p></article>`).join('') : `<p class="px-4 py-5 text-sm text-slate-500">${getRole() === 'admin' ? 'Belum ada informasi pendaftar baru.' : 'Belum ada informasi terbaru dari Admin.'}</p>`;
-      }
     }
 
-    const notificationButton = document.querySelector('button[aria-label="Notifikasi antrean berkas"]');
-    if (notificationButton) {
-      notificationButton.id = 'dashboardNotificationButton';
-      notificationButton.style.display = '';
-      notificationButton.setAttribute('aria-label', isAdmin ? 'Notifikasi Admin' : 'Notifikasi Kepala Sekolah');
-      const notificationHost = notificationButton.parentElement;
-      const notificationPanel = document.createElement('section');
-      notificationPanel.id = 'roleNotificationPanel';
-      notificationPanel.className = 'absolute right-0 top-full z-[60] mt-3 hidden max-h-96 w-80 max-w-[calc(100vw-2rem)] overflow-y-auto rounded-lg border border-slate-200 bg-white shadow-xl';
-      notificationPanel.setAttribute('aria-label', isAdmin ? 'Notifikasi Admin' : 'Notifikasi Kepala Sekolah');
-      notificationHost.appendChild(notificationPanel);
-      notificationButton.addEventListener('click', () => {
-        const opening = notificationPanel.classList.contains('hidden');
-        notificationPanel.classList.toggle('hidden', !opening);
-        if (opening) store.markNotificationsRead(getRole());
-      });
-      document.addEventListener('click', event => {
-        if (!notificationHost.contains(event.target)) notificationPanel.classList.add('hidden');
-      });
-    }
     document.getElementById('kepsekSearch')?.addEventListener('input', () => { currentPage = 1; render(); });
     document.getElementById('kepsekPathFilter')?.addEventListener('change', () => { currentPage = 1; render(); });
     document.getElementById('dashboardPagination')?.addEventListener('click', event => {
@@ -1095,5 +1062,6 @@
     initDashboard();
     initReport();
     initWaveQuotaSettings();
+    document.documentElement.dataset.ppdbReady = 'true';
   }, { once: true });
 })();

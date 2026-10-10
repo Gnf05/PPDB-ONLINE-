@@ -1,5 +1,13 @@
 (function() {
   function initializeNavigation() {
+    const icons = {
+      dashboard: 'dashboard',
+      'data-pendaftar': 'assignment',
+      'verifikasi-berkas': 'folder_shared',
+      'seleksi-dan-kelulusan': 'verified',
+      'master-gelombang': 'calendar_month',
+      laporan: 'query_stats'
+    };
     const routes = {
       dashboard: 'index.html',
       'data-pendaftar': 'datapendaftar.html',
@@ -36,7 +44,8 @@
       return;
     }
 
-    document.querySelectorAll('[data-path]').forEach(link => {
+    const currentRoute = Object.entries(routes).find(([, destination]) => destination === currentFile)?.[0] || 'dashboard';
+    document.querySelectorAll('aside nav a[data-path]').forEach(link => {
       const route = link.dataset.path;
       const destination = routes[route];
       if (session.role === 'kepsek' && !['dashboard', 'laporan'].includes(route)) {
@@ -46,7 +55,34 @@
       if (destination) {
         link.setAttribute('href', destination);
       }
+      const label = [...link.childNodes]
+        .filter(node => !(node.nodeType === Node.ELEMENT_NODE && node.classList.contains('material-symbols-outlined')))
+        .map(node => node.textContent)
+        .join(' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      const icon = document.createElement('span');
+      icon.className = 'material-symbols-outlined ppdb-sidebar-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.textContent = icons[route] || 'circle';
+      const text = document.createElement('span');
+      text.className = 'ppdb-sidebar-label';
+      text.textContent = label;
+      link.replaceChildren(icon, text);
+      link.className = 'ppdb-sidebar-link';
+      if (route === currentRoute) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
     });
+
+    const sidebarBrand = document.querySelector('aside > div:first-child > div:first-child');
+    if (sidebarBrand) {
+      sidebarBrand.classList.add('ppdb-sidebar-brand');
+      const brandImage = sidebarBrand.querySelector('img');
+      if (brandImage) brandImage.classList.add('ppdb-sidebar-logo');
+    }
+
+    document.querySelector('header input[placeholder="Cari NISN, nama pendaftar..."]')?.closest('.relative.w-80')?.remove();
+    setupNotifications(session.role);
 
     if (session.role === 'kepsek') {
       document.querySelectorAll('[data-admin-only]').forEach(element => {
@@ -235,6 +271,76 @@
         window.location.assign('login.html');
       });
     }
+    document.documentElement.dataset.navigationReady = 'true';
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, character => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[character]);
+  }
+
+  function setupNotifications(role) {
+    const store = window.PPDBData;
+    const button = document.querySelector('header button[aria-label*="Notifikasi"]');
+    if (!store || !button) return;
+
+    button.id = 'dashboardNotificationButton';
+    button.setAttribute('aria-label', 'Notifikasi aktivitas terbaru');
+    button.setAttribute('aria-haspopup', 'true');
+    button.setAttribute('aria-expanded', 'false');
+    const badge = button.querySelector('span.bg-status-danger');
+    if (badge) {
+      badge.textContent = '';
+      badge.classList.add('hidden');
+    }
+
+    const host = button.parentElement;
+    let panel = document.getElementById('roleNotificationPanel');
+    if (!panel) {
+      panel = document.createElement('section');
+      panel.id = 'roleNotificationPanel';
+      panel.className = 'absolute right-0 top-full z-[60] mt-3 hidden max-h-96 w-80 max-w-[calc(100vw-2rem)] overflow-y-auto rounded-lg border border-slate-200 bg-white shadow-xl';
+      panel.setAttribute('aria-label', 'Aktivitas terbaru');
+      panel.setAttribute('role', 'region');
+      host.appendChild(panel);
+    }
+
+    const update = () => {
+      const unread = store.getUnreadNotifications(role);
+      const activities = store.getNotifications(role).slice(0, 20);
+      if (badge) {
+        badge.textContent = unread.length > 99 ? '99+' : String(unread.length);
+        badge.classList.toggle('hidden', unread.length === 0);
+      }
+      panel.innerHTML = activities.length ? activities.map(item => `
+        <article class="border-b border-slate-100 px-4 py-3 last:border-0">
+          <p class="text-sm font-medium text-slate-800">${escapeHtml(item.applicantName || item.name || item.registrationNo || 'Aktivitas PPDB')} · ${escapeHtml(item.action)}</p>
+          <p class="mt-1 text-xs text-slate-500">${escapeHtml(item.registrationNo || '')}${item.actor ? ` · ${escapeHtml(item.actor)}` : ''} · ${escapeHtml(new Date(item.timestamp).toLocaleString('id-ID'))}</p>
+        </article>`).join('') : '<p class="px-4 py-5 text-sm text-slate-500">Belum ada aktivitas terbaru.</p>';
+    };
+
+    update();
+    if (button.dataset.notificationsBound) return;
+    button.dataset.notificationsBound = 'true';
+    button.addEventListener('click', () => {
+      const opening = panel.classList.contains('hidden');
+      panel.classList.toggle('hidden', !opening);
+      button.setAttribute('aria-expanded', String(opening));
+      if (opening) store.markNotificationsRead(role);
+      update();
+    });
+    document.addEventListener('click', event => {
+      if (!host.contains(event.target)) {
+        panel.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+    window.addEventListener('ppdb-data-updated', update);
+    window.addEventListener('ppdb-notifications-updated', update);
+    window.addEventListener('storage', event => {
+      if (['ppdb_admin_activity', `ppdb_notification_reads_${role}`].includes(event.key)) update();
+    });
   }
 
   function bootNavigation() {
