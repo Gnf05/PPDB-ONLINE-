@@ -493,15 +493,40 @@
       const distribution = document.getElementById('dashboardPathDistribution');
       if (distribution) {
         const paths = [
-          ['zonasi', 'Zonasi Reguler', 'bg-primary'],
-          ['prestasi', 'Prestasi Akademik/Non', 'bg-secondary-container'],
-          ['mutasi', 'Perpindahan Tugas Orang Tua', 'bg-outline']
+          { key: 'zonasi', label: 'Zonasi Reguler', color: 'var(--ppdb-chart-zonasi)' },
+          { key: 'prestasi', label: 'Prestasi Akademik/Non', color: 'var(--ppdb-chart-prestasi)' },
+          { key: 'mutasi', label: 'Perpindahan Tugas Orang Tua', color: 'var(--ppdb-chart-mutasi)' }
         ];
-        distribution.innerHTML = paths.map(([key, label, tone]) => {
-          const count = applicants.filter(item => item.pathway === key).length;
-          const percent = applicants.length ? Math.round(count / applicants.length * 100) : 0;
-          return `<div><div class="mb-1 flex justify-between text-xs"><span class="font-medium">${label}</span><span class="font-bold">${percent}% (${count} pendaftar)</span></div><div class="h-1.5 overflow-hidden rounded-full bg-slate-200"><div class="h-full ${tone}" style="width:${percent}%"></div></div></div>`;
+        let angle = 0;
+        const pathCounts = paths.map(path => ({
+          ...path,
+          count: applicants.filter(applicant => applicant.pathway === path.key).length
+        }));
+        const chartStops = pathCounts.map(path => {
+          const start = angle;
+          angle += applicants.length ? path.count / applicants.length * 360 : 0;
+          return `${path.color} ${start.toFixed(2)}deg ${angle.toFixed(2)}deg`;
+        });
+        const chartFill = applicants.length
+          ? `conic-gradient(${chartStops.join(', ')})`
+          : 'conic-gradient(var(--ppdb-donut-empty) 0deg 360deg)';
+        const donut = document.createElement('div');
+        donut.className = 'ppdb-donut';
+        donut.style.setProperty('--ppdb-donut-chart', chartFill);
+        donut.setAttribute('role', 'img');
+        donut.setAttribute('aria-label', `Distribusi jalur dari ${applicants.length} pendaftar`);
+        donut.innerHTML = `<div class="ppdb-donut-center"><strong id="dashboardPathTotal">${applicants.length.toLocaleString('id-ID')}</strong><span>Pendaftar</span></div>`;
+        const legend = document.createElement('div');
+        legend.className = 'ppdb-donut-legend';
+        legend.innerHTML = pathCounts.map(path => {
+          const percent = applicants.length ? Math.round(path.count / applicants.length * 100) : 0;
+          return `<div class="ppdb-donut-legend-item"><span class="ppdb-donut-swatch" style="--ppdb-swatch:${path.color}"></span><span class="ppdb-donut-legend-label">${path.label}</span><strong>${percent}%</strong><span class="ppdb-donut-legend-count">${path.count.toLocaleString('id-ID')}</span></div>`;
         }).join('');
+        distribution.replaceChildren(donut, legend);
+        if (!distribution.dataset.animated) {
+          requestAnimationFrame(() => donut.classList.add('ppdb-donut-open'));
+          distribution.dataset.animated = 'true';
+        }
       }
 
       const dates = applicants.map(item => new Date(item.appliedAt)).filter(date => !Number.isNaN(date.getTime()));
