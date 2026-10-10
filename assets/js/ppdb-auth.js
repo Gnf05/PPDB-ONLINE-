@@ -1,6 +1,7 @@
 (function() {
   const USERS_KEY = 'ppdb_users';
   const AUTH_VERSION_KEY = 'ppdb_auth_version';
+  const demoIdentifiers = { admin: 'admin123', kepsek: 'kepsek123' };
   const defaultUsers = [
     { id: 'user-admin', role: 'admin', displayName: 'Admin PPDB', identifier: 'operator.surabaya01@ppdb.jatimprov.go.id', password: 'admin123' },
     { id: 'user-kepsek', role: 'kepsek', displayName: 'Kepala Sekolah', identifier: '197508122002121003@dinas.go.id', password: 'kepsek123' }
@@ -24,7 +25,8 @@
   }
 
   function authenticate(identifier, password, role) {
-    const user = getUsers().find(account => account.role === role && account.identifier.toLowerCase() === identifier.trim().toLowerCase() && account.password === password);
+    const normalizedIdentifier = identifier.trim().toLowerCase();
+    const user = getUsers().find(account => account.role === role && (account.identifier.toLowerCase() === normalizedIdentifier || demoIdentifiers[role] === normalizedIdentifier) && account.password === password);
     return user ? { id: user.id, role: user.role, displayName: user.displayName, identifier: user.identifier } : null;
   }
 

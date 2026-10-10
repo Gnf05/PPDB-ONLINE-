@@ -238,6 +238,10 @@
   }
 
   function bootNavigation() {
+    const themeScript = document.createElement('script');
+    themeScript.src = '../assets/js/theme.js';
+    document.head.appendChild(themeScript);
+
     if (window.PPDBAuth) {
       initializeNavigation();
       return;
