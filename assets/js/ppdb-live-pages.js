@@ -194,7 +194,7 @@
     window.addEventListener('ppdb-data-updated', render);
     window.addEventListener('storage', event => { if (event.key === 'ppdb_applicants') render(); });
     window.addEventListener('beforeunload', () => documentUrls.forEach(url => URL.revokeObjectURL(url)));
-    render();
+    return render();
   }
 
   function initSelection() {
@@ -307,9 +307,12 @@
     render();
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    initVerification();
-    initSelection();
-    document.documentElement.dataset.ppdbReady = 'true';
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      await initVerification();
+      initSelection();
+    } finally {
+      document.documentElement.dataset.ppdbReady = 'true';
+    }
   }, { once: true });
 })();
