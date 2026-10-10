@@ -3,8 +3,9 @@
 Ringkasan: saya sudah menyederhanakan proyek menjadi beberapa file inti yang saling terhubung (client-side only, mock data menggunakan localStorage).
 
 File inti:
-- `login.html` - halaman autentikasi (mock)
-- `index.html` - dashboard utama
+- `index.html` - entry point yang mengarahkan ke halaman login
+- `src/login.html` - halaman autentikasi (mock)
+- `src/index.html` - dashboard utama setelah login
 - `users.html` - CRUD users (localStorage)
 - `reports.html` - laporan + filter + print
 - `settings.html` - pengaturan dasar
@@ -22,7 +23,7 @@ code --install-extension esbenp.prettier-vscode
 ```
 
 2. Di VS Code buka folder proyek ini, lalu buka `index.html` atau `login.html`, klik kanan -> "Open with Live Server".
-3. Jika tidak menggunakan Live Server, cukup buka `login.html` di browser (double-click) lalu login untuk mengakses halaman.
+3. Jika tidak menggunakan Live Server, cukup buka `index.html` di browser (double-click), login, lalu dashboard akan terbuka.
 
 Catatan:
 - Data users disimpan di `localStorage` (key: `ppdb_users`). Login mock disimpan di `ppdb_logged_in`.

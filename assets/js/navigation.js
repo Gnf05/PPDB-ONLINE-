@@ -1,7 +1,7 @@
 (function() {
   function initializeNavigation() {
     const routes = {
-      dashboard: 'dashboard1.html',
+      dashboard: 'index.html',
       'data-pendaftar': 'datapendaftar.html',
       'verifikasi-berkas': 'verifikasi_berkas.html',
       'seleksi-dan-kelulusan': 'seleksi_kelulusan.html',
@@ -30,9 +30,9 @@
     let currentUser = user;
 
     const currentFile = window.location.pathname.split('/').pop();
-    const kepsekPages = ['dashboard1.html', 'dashboard2.html', 'Laporan.html'];
+    const kepsekPages = ['index.html', 'dashboard2.html', 'Laporan.html'];
     if (session.role === 'kepsek' && !kepsekPages.includes(currentFile)) {
-      window.location.replace('dashboard1.html');
+      window.location.replace('index.html');
       return;
     }
 

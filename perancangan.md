@@ -56,7 +56,7 @@
 ```text
 ppdb-admin-panel/
 │
-├── index.html                    # Entry point — redirect ke dashboard
+├── index.html                    # Entry point — redirect ke login di src/
 │
 ├── docs/
 │   └── PERANCANGAN.md            # ← Dokumen ini
