@@ -243,7 +243,7 @@
       return;
     }
     const authScript = document.createElement('script');
-    authScript.src = 'ppdb-auth.js';
+    authScript.src = '../assets/js/ppdb-auth.js';
     authScript.onload = initializeNavigation;
     authScript.onerror = () => window.location.replace('login.html');
     document.head.appendChild(authScript);
